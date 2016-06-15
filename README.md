@@ -4,7 +4,7 @@ Author: Jennifer Yen jennifer.yen@personalis.com
 
 Brief description
 -----------------------------
-hgvslib provides methods to parse and compare the equivalency of different variant strings 
+hgvslib provides methods to parse and compare the equivalency of variant strings 
 described according to Human Genome Variation Society (HGVS) syntax. 
 
 Purpose
@@ -35,14 +35,15 @@ test set, from which deviations in positional justification are assumed to be
 non-HGVS compliant.
 
 If there are HGVS expressions that are not currently supported by this tool,
-please make a comment on the github or send an email to
-jennifer.yen@personalis.com.
+please make a comment or ping jennifer.yen@personalis.com.
 
 
 Future plans
 -------------------
 - Function to produce multiple HGVS aliases for the same variant from an expanded form
 - Cross-verify duplication and insertion sequences
+- Include HGVS validation test set (will be up soon)
+
 
 Unit Tests
 -------------------
@@ -51,7 +52,7 @@ Over 115 unit tests have been created to test this code.
 
 To run:
 ```
-$ python runtests.py -v
+python runtests.py -v
 ```
 
 Example usage
@@ -123,10 +124,8 @@ hgvs.type
 Example script
 -------------------
 
-The example script reads in a text file with a reference HGVS string and 
-columns of HGVS output from three different annotation callers. 
-It compares the different HGVS strings in each row with the reference annotation
-and outputs the result of the comparison: an exact match 'yes', equivalent 
+The example script reads in a file to compare, for each variant, three different annotations 
+with a reference HGVS string. The result of the comparison: an exact match 'yes', equivalent 
 'yes_m' or non-match 'no'.
  
 ```python
