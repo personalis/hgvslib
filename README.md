@@ -1,9 +1,18 @@
-hgvslib
+Summary Information
 -----------------------------
-hgvslib provides methods to parse and compare the equivalency of two 
-variant strings described according to recommendations by the Human Genome 
-Variation Society (HGVS).
+Author: Jennifer Yen jennifer.yen@personalis.com
 
+Brief description
+-----------------------------
+hgvslib provides methods to parse and compare the equivalency of different variant strings 
+described according to Human Genome Variation Society (HGVS) syntax. 
+
+Purpose
+-----------------------------
+This package was written to assess the accuracy and concordance of HGVS variant 
+expressions between different annotation tools (Variant Effect Predictor, Variation Reporter, 
+SnpEff) and the COSMIC and ClinVar databases. The results of these comparisons have been 
+summarized in the manuscript: http://biorxiv.org/content/early/2016/05/19/054023.
 
 Features
 -----------------------------
@@ -49,31 +58,32 @@ Example usage
 -------------------
 
 ```python
-$ from hgvslib.class_functions import compare_hgvs
+from hgvslib.class_functions import compare_hgvs
 
 # The following check returns “yes”, indicating that this is an exact match.
 
-$ hgvs1 = 'NM_000352.3:c.123delA'
-$ hgvs2 = 'NM_000352.3:c.123delA'
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'NM_000352.3:c.123delA'
+hgvs2 = 'NM_000352.3:c.123delA'
+compare_hgvs(hgvs1, hgvs2)
 'yes'
 
-The following checks return “yes_m”, indicating that these are equivalent 
+
+# The following checks return “yes_m”, indicating that these are equivalent 
 but not exact matches ('yes modified').
 
-$ hgvs1 = 'NP_005647.3:p.Q29fs'
-$ hgvs2 = 'NP_005647.3:p.Q29Efs*10’
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'NP_005647.3:p.Q29fs'
+hgvs2 = 'NP_005647.3:p.Q29Efs*10’
+compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
-$ hgvs1 = 'p.Ser78Ser='
-$ hgvs2 = 'p.='
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'p.Ser78Ser='
+hgvs2 = 'p.='
+compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
-$ hgvs1 = 'p.Glu78fs'
-$ hgvs2 = 'p.Glu78GlyfsTer7'
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'p.Glu78fs'
+hgvs2 = 'p.Glu78GlyfsTer7'
+compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
 hgvs1 = 'NM_004360.3:c.48+6_48+7delinsTT'
@@ -81,7 +91,7 @@ hgvs2 = 'NM_004360.3:c.48+6_48+7delCCinsTT'
 compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
-#The following check returns “no”, indicating that these are different
+# The following check returns “no”, indicating that these are different
 variants.
 
 hgvs1 = 'NM_000352.3:c.123delA'
@@ -99,10 +109,13 @@ compare_hgvs(hgvs1, hgvs2)
 from hgvslib.cHGVS import cHGVS
 
 hgvs = cHGVS('NM_000352.3:c.215-10A>G')
+
 hgvs.transcript
 'NM_000352.3'
+
 hgvs.name
 'c.215-10A>G'
+
 hgvs.type
 'substitution'
 ```
@@ -117,7 +130,7 @@ and outputs the result of the comparison: an exact match 'yes', equivalent
 'yes_m' or non-match 'no'.
  
 ```python
-$ python example/example_check_variants.py --infile example/test_file.txt
+python example/example_check_variants.py --infile example/test_file.txt
 ```
 
 
