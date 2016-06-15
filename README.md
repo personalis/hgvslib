@@ -32,8 +32,8 @@ jennifer.yen@personalis.com.
 
 Future plans
 -------------------
--Function to produce multiple HGVS aliases for the same variant from an expanded form
-
+- Function to produce multiple HGVS aliases for the same variant from an expanded form
+- Cross-verify duplication and insertion sequences
 
 Unit Tests
 -------------------
@@ -41,16 +41,17 @@ Unit Tests
 Over 115 unit tests have been created to test this code. 
 
 To run:
-
+```
 $ python runtests.py -v
-
+```
 
 Example usage
 -------------------
 
+```python
 $ from hgvslib.class_functions import compare_hgvs
 
-The following check returns “yes”, indicating that this is an exact match.
+# The following check returns “yes”, indicating that this is an exact match.
 
 $ hgvs1 = 'NM_000352.3:c.123delA'
 $ hgvs2 = 'NM_000352.3:c.123delA'
@@ -75,36 +76,36 @@ $ hgvs2 = 'p.Glu78GlyfsTer7'
 $ compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
-$ hgvs1 = 'NM_004360.3:c.48+6_48+7delinsTT'
-$ hgvs2 = 'NM_004360.3:c.48+6_48+7delCCinsTT'
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'NM_004360.3:c.48+6_48+7delinsTT'
+hgvs2 = 'NM_004360.3:c.48+6_48+7delCCinsTT'
+compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
-The following check returns “no”, indicating that these are different
+#The following check returns “no”, indicating that these are different
 variants.
 
-$ hgvs1 = 'NM_000352.3:c.123delA'
-$ hgvs2 = 'NM_000352.3:c.125delA'
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'NM_000352.3:c.123delA'
+hgvs2 = 'NM_000352.3:c.125delA'
+compare_hgvs(hgvs1, hgvs2)
 'no'
 
-$ hgvs1 = 'NP_005647.3:p.Q29fs'
-$ hgvs2 = 'NP_005647.3:p.Q29Terfs'
-$ compare_hgvs(hgvs1, hgvs2)
+hgvs1 = 'NP_005647.3:p.Q29fs'
+hgvs2 = 'NP_005647.3:p.Q29Terfs'
+compare_hgvs(hgvs1, hgvs2)
 'no'
 
-The library can also perform basic parsing steps from an HGVS name.
+#The library can also perform basic parsing steps from an HGVS name.
 
-$ from hgvslib.cHGVS import cHGVS
+from hgvslib.cHGVS import cHGVS
 
-$ hgvs = cHGVS('NM_000352.3:c.215-10A>G')
-$ hgvs.transcript
+hgvs = cHGVS('NM_000352.3:c.215-10A>G')
+hgvs.transcript
 'NM_000352.3'
-$ hgvs.name
+hgvs.name
 'c.215-10A>G'
-$ hgvs.type
+hgvs.type
 'substitution'
-
+```
 
 Example script
 -------------------
@@ -115,7 +116,8 @@ It compares the different HGVS strings in each row with the reference annotation
 and outputs the result of the comparison: an exact match 'yes', equivalent 
 'yes_m' or non-match 'no'.
  
+```python
 $ python example/example_check_variants.py --infile example/test_file.txt
-
+```
 
 
