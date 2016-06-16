@@ -12,7 +12,8 @@ Purpose
 This package was written to assess the accuracy and concordance of HGVS variant 
 expressions between different annotation tools (Variant Effect Predictor, Variation Reporter, 
 SnpEff) and the COSMIC and ClinVar databases. The results of these comparisons have been 
-summarized in the manuscript: http://biorxiv.org/content/early/2016/05/19/054023.
+summarized in the manuscript 'A variant by any name: quantifying annotation discordance across
+tools and clinical databases': http://biorxiv.org/content/early/2016/05/19/054023.
 
 Features
 -----------------------------
