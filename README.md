@@ -70,7 +70,7 @@ compare_hgvs(hgvs1, hgvs2)
 
 
 # The following checks return “yes_m”, indicating that these are equivalent 
-but not exact matches ('yes modified').
+# but not exact matches ('yes modified').
 
 hgvs1 = 'NP_005647.3:p.Q29fs'
 hgvs2 = 'NP_005647.3:p.Q29Efs*10’
@@ -93,7 +93,7 @@ compare_hgvs(hgvs1, hgvs2)
 'yes_m'
 
 # The following check returns “no”, indicating that these are different
-variants.
+# variants.
 
 hgvs1 = 'NM_000352.3:c.123delA'
 hgvs2 = 'NM_000352.3:c.125delA'
@@ -105,7 +105,7 @@ hgvs2 = 'NP_005647.3:p.Q29Terfs'
 compare_hgvs(hgvs1, hgvs2)
 'no'
 
-#The library can also perform basic parsing steps from an HGVS name.
+# The library can also perform basic parsing steps from an HGVS name.
 
 from hgvslib.cHGVS import cHGVS
 
