@@ -42,11 +42,12 @@ class pHGVS(object):
 		:return: variant type based on pHGVS syntax
 		'''
 
-		if 'p.' not in self.name and self.name not in c.NULL_SET:
-			raise Exception('Not a protein coding variant.')
 
 		if self.name in c.NULL_SET:
 			self.type = '?'
+
+		elif 'p.' not in self.name and self.name not in c.NULL_SET:
+			raise Exception('Not a protein coding variant.')
 
 		elif self.__is_synonymous():
 			self.type = c.SYNONYMOUS
@@ -380,23 +381,32 @@ class pHGVS(object):
 
 	@classmethod
 	def parse_phgvs_string(cls, hgvs_str):
-		phgvs = hgvs_str
-		refseq_id = ''
+		"""
+		Cleans up the hgvs string, parses it into refseq id and phgvs
+		:param hgvs_str: input hgvs string
+		:return: refseq accession, phgvs
+		"""
 
-		if c.PROTEIN_START not in hgvs_str and hgvs_str not in c.NULL_SET:
+		if hgvs_str is None or not hgvs_str:
+			return '', ''
+
+		elif c.PROTEIN_START not in hgvs_str and hgvs_str not in c.NULL_SET:
 			logging.error('Not a protein coding variant: %s.' % hgvs_str)
-			phgvs = '-'
+			return '', ''
 
 		# some formatting
-		if ':' in hgvs_str:
+		elif ':' in hgvs_str:
 			refseq_id, phgvs = phgvs.split(':')
+			# remove brackets that are not associated with p.(=)
+			if phgvs.startswith('(') and phgvs.endswith(')'):
+				phgvs = phgvs.rstrip(')').lstrip('(')
+			return refseq_id, phgvs
 
-		# remove brackets that are not associated with p.(=)
-		if phgvs.startswith('(') and phgvs.endswith(')'):
-			phgvs = phgvs.rstrip(')').lstrip('(')
-
-		return refseq_id, phgvs
-
+		else:
+			# remove brackets that are not associated with p.(=)
+			if hgvs_str.startswith('(') and hgvs_str.endswith(')'):
+				hgvs_str = hgvs_str.rstrip(')').lstrip('(')
+			return '', hgvs_str
 
 
 	#---------------------------------------------------------------
@@ -492,6 +502,8 @@ class pHGVS(object):
 		'''
 		Converts singlet amino acid to triplet
 		'''
+		if not hgvs_str:
+			return ''
 		hgvs = re.sub(r'([A-Z])', pHGVS.replace_amino_acid_singlet, hgvs_str)
 		return hgvs
 

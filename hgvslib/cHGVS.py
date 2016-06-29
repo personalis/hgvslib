@@ -39,9 +39,8 @@ class cHGVS(object):
 		self._get_chgvs_type()
 		self._normalize_chgvs()
 
-	@property
-	#def __str__(self):
-	def cHGVS(self):
+	def __str__(self):
+
 		return (VARIANT_INFO.format(
 			trans=self.transcript,
 			chgvs=self.name,
@@ -50,6 +49,8 @@ class cHGVS(object):
 			intronic=self.intronic
 			)
 		)
+
+
 
 	# boolean result for whether the variant is in intronic position
 	def _is_intronic(self):
