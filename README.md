@@ -4,8 +4,8 @@ Author: Jennifer Yen jennifer.yen@personalis.com
 
 Brief description
 -----------------------------
-hgvslib provides methods to parse and compare the equivalency of variant strings 
-described according to Human Genome Variation Society (HGVS) syntax. 
+hgvslib is a package for parsing and comparing variant strings described according to 
+recommendations by the Human Genome Variation Society (HGVS). 
 
 Purpose
 -----------------------------

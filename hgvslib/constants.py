@@ -1,10 +1,9 @@
-## REFACTOR NO_MATCH AS ''
 EXACT                   = 'yes'
-EQUIVALENT              = 'yes_m'  # for yes_modified
+EQUIVALENT              = 'yes_m'  # e.g. yes_modified
 NO_MATCH                = 'no'
 
 
-NULL_SET                = frozenset(['NULL','null','', '-', 'p.?'])
+NULL_SET                = frozenset(['NULL','null','', '-', 'p.?', None])
 SYN_ALIAS_SET           = frozenset(['p.(=)', 'p.='])
 COSMIC_NULL             = 'p.?'
 NON_CODING              = '-'
@@ -15,7 +14,7 @@ DEL                     = 'del'
 INS                     = 'ins'
 DUP                     = 'dup'
 SUB                     = 'sub'
-DELINS_SPLIT            = 'del_ins'  # for c.34delTTinsAA
+DELINS_SPLIT            = 'del_ins'  # for hgvs examples: c.34delTTinsAA
 UNKNOWN                 = '?'
 INVERSION               = 'inv'
 SYNONYMOUS              = 'synonymous'
