@@ -441,7 +441,7 @@ class pHGVS(object):
 		hgvs_obj1 = pHGVS.is_phgvs_instance(hgvs_obj1)
 		hgvs_obj2 = pHGVS.is_phgvs_instance(hgvs_obj2)
 
-		if is_null(hgvs_obj1) and is_null(hgvs_obj2):
+		if is_null(hgvs_obj1) and is_null(hgvs_obj2) or (not hgvs_obj1.name and not hgvs_obj2.name):
 			if hgvs_obj1 == hgvs_obj2:      return c.EXACT
 			else:                           return c.EQUIVALENT
 
