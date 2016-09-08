@@ -1,0 +1,127 @@
+ID	Chr	Genomic_Position	Ref	Alt	Tx_Strand_wrt_Genomic_Reference	NM	NC	NP	Effect_Impact	Effect	Function_class	Source	Variant_type	Gene	Notes for inclusion
+PTV001	1	5935162	A	T	-	NM_015102.3:c.2818-2T>A	NC_000001.10:g.5935162A>T	-		splice_acceptor_variant		dbSNP	substitution		Intronic region where there is a discrepancy between the RefSeq transcript and Genomic Sequencee. Not to reported at the c. because not expressed in transcript.
+PTV002	1	12065948	C	T	+	NM_014874.3:c.1676C>T	NC_000001.10:g.12065948C>T	NP_055689.1:p.Pro559Leu	-	missense_variant	MISSENSE	Synthetic	substitution	CMT2A|CMT2A2|CPRP1|HSG|MARF	
+PTV003	1	46655125	CTCAC	C	-	NM_017739.3:c.1895+1_1895+4delGTGA	NC_000001.10:g.46655126_46655129delTCAC	-	-	splice_region_variant&intron_variant		ClinVar	deletion	POMGNT1	
+PTV004	1	68912523	TGAGCCAGAG	T	-	NM_000329.2:c.106_114delCTCTGGCTC	NC_000001.10:g.68912524_68912532delGAGCCAGAG	NP_000320.1:p.Leu36_Leu38del		inframe_deletion		ClinVar	deletion		
+PTV005	1	68912526	GCCAGAG	G	-	NM_000329.2:c.109_114delTGGCTC	NC_000001.10:g.68912527_68912532delCCAGAG	NP_000320:p.Trp37_Leu38del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Right shifting inframe deletion on reverse strand (genomic and transcript right shift).
+PTV006	1	109817590	G	T	+	NM_001408.2:c.*919G>T	NC_000001.10:g.109817590G>T	-	-	3_prime_UTR_variant	NULL	ClinVar	substitution	CELSR2	3'UTR regulatory variant with association in ClinVar
+PTV007	1	145597475	GAAGT	G	-	NM_006468.6:c.1070+35_1070+38delACTT	NC_000001.10:g.145597476_145597479delAAGT	-		intron_variant; deletion	NULL	Synthetic	deletion	POLR3C	Strand changed in fix patch
+PTV008	1	153791300	CTG	C	+	NM_020699.2:c.562_563delCA	NC_000001.10:g.153791301_153791302delTG	NP_065750.1:p.Gln188Glufs*36	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	GATAD2B	
+PTV009	1	156104666	TTGAGAGCCGGCTGGCGGATGCGCT	TCCCC	+	NM_005572.3:c.711_734delinsCCCC	NC_000001.10:g.156104667_156104690delinsCCCC	NP_005563.1:p.Glu238Profs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	LMNA -preferred	Right-shifting deletion resulting in different protein change
+PTV010	1	156108541	G	GG	+	NM_170707.3:c.1961dupG	NC_000001.10:g.156108541dup	NP_733821.1:p.Thr655Asnfs*49	-	frameshift_variant+missense_variant	NULL	ClinVar	duplication	LMNA - also LMNA	Duplication; normalizes to 1:156108540:C:CG
+PTV011	1	161279695	T	A	-	NM_000530.6:c.1A>T	NC_000001.10:g.161279695T>A	NP_000521.2:p.Met1?	-	start_lost	NULL	Synthetic	substitution	MPZ	
+PTV012	1	169519049	T	.	-	NM_000139.4:c.1601G>A	NC_000001.10:g.169519049T=	NP_000121.2:p.Arg534Gln	-	missense_variant	MISSENSE	ClinVar	substitution	MS4A2	Leiden Factor V
+PTV013	1	226125468	G	A	-	NM_003240.3:c.774C>T	NC_000001.10:g.226125468G>A	NP_003231.2:p.Thr258=	-	synonymous_variant	NULL	ClinVar	substitution	LEFTY2	LEFTY2 Paralog- intragene duplication
+PTV070	2	50149352	T	C	-	NM_001135659.1:c.4374A>G	NC_000002.11:g.50149352T>C	NP_001129131.1:p.Pro1458=	-	synonymous_variant	SILENT	ClinVar	substitution	NRXN1	RefSeq-Genomic Reference difference
+PTV071	2	50847195	G	A	-	NM_001135659.1:c.1405C>T	NC_000002.11:g.50847195G>A	NP_001129131.1:p.Pro469Ser	-	missense_variant	MISSENSE	ClinVar	substitution	NRXN1	
+PTV072	2	71825797	C	G	+	NM_003494.3:c.3624C>G	NC_000002.11:g.71825797C>G	NP_003485.1:p.Ile1208Met	-	missense_variant	MISSENSE	Leiden	substitution	DYSF	
+PTV073	2	166179712	G	C	+	NM_021007.2:c.1718G>C	NC_000002.11:g.166179712G>C	NP_066287.2:p.Ser573Thr	-	missense_variant	MISSENSE	Synthetic	substitution	SCN2A	
+PTV074	2	166183371	A	G	+	NM_021007.2:c.2026A>G	NC_000002.11:g.166183371A>C	NP_066287.2:p.Thr676Ala	-	missense_variant	MISSENSE	Synthetic	substitution	SCN2A	
+PTV075	2	166929889	GTCCAGGTCCT	GAC	-	NM_001165963.1:c.233_242delinsGT	NC_000002.11:g.166929890_166929899delinsAC 	NP_001159435.1:p.Glu78Glyfs*7 	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SCN1A	Normalizes to 2:166929890:TCCAGGTCCT:AC
+PTV076	2	166929891	CCAGGTCCT	C	-	NM_001165963.1:c.233_240delAGGACCTG	NC_000002.11:g.166929892_166929899delCAGGTCCT	NP_001159435.1:p.Glu78Glyfs*7	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SCN1A	
+PTV077	2	179393504	G	T	-	NM_133378.4:c.99270C>A	NC_000002.11:g.179393504G>T	NP_596869.4:p.Ser33090Arg	-	missense_variant	MISSENSE	Synthetic	substitution	TTN	
+PTV078	2	185803444	TGCAGCTGCTGCAGCTGCAGCTGCA	T	+	NM_194250.1:c.3324_3347delTGCAGCTGCAGCTGCAGCCGCAGCTGC	NC_000002.11:g.185803445_185803468delGCAGCTGCTGCAGCTGCAGCTGCA	NP_919226.1:p.Ala1112_Ala1119del	-	inframe_deletion	NULL	Synthetic	deletion	ZNF804A	
+PTV079	2	201950249	G	T	+	NM_002491.2:c.208G>T	NC_000002.11:g.201950249G>T	NP_002482.1:p.Gly70*	-	stop_gained	NONSENSE	ClinVar	substitution	NDUFB3	
+PTV080	2	238268730	C	A	-	NM_004369.3:c.6282+1G>T	NC_000002.11:g.238268730C>A	-	-	splice_donor_variant	NULL	ClinVar	substitution	COL6A3	
+PTV085	3	50402127	T	G	-	NM_006030.2:c.3402A>C	NC_000003.11:g.50402127T>G	NP_006021.2:p.Gln1134His	-	missense_variant	MISSENSE	dbSNP	substitution	CACNA2D2	
+PTV086	3	50402890	G	A	-	NM_006030.2:c.2995C>T	NC_000003.11:g.50402890G>A	NP_006021.2:p.Pro999Ser	-	missense_variant	MISSENSE	dbSNP	substitution	CACNA2D2	
+PTV087	3	57851007	AG	A	+	NM_007159.2:c.1135+565delG	NC_000003.11:g.57851008delG	-	-	intron_variant	NULL	Synthetic	deletion	SLMAP	
+PTV088	3	122003832	G	C	+	NM_000388.3:c.3031C=	NC_000003.11:g.122003832G>C	NP_000379.2:p.Gln1011=	-	synonymous_variant	NULL	dbSNP	substitution	CASR	Discrepancy between the RefSeq transcript and Genomic Sequence; not corrected in GRCh38
+PTV089	4	153332910	C	CAGG	-	NM_033632.3:c.45_46insCCT	NC_000004.11:g.153332910_153332911insAGG	NP_361014.1:p.Thr15_Gly16insPro		inframe_insertion		COSMIC	insertion	FBXW7	
+PTV090	5	1295183	G	A	-	NM_198253.2:c.-79C>T	NC_000005.9:g.1295183G>A	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	TERT 	TERT promoter mutation
+PTV091	5	77396835	TTTC	T	-	NM_003664.4:c.2409_2411delGAA	NC_000005.9:g.77396836_77396838del	NP_003655.3:p.Lys804del	-	inframe_deletion	NULL	ClinVar	deletion	AP3B1	
+PTV092	5	118811422	GGTGAG	G	-	NM_000414.3:c.302+1_302+5delGTGAG	NC_000005.9:g.118811423_118811427delGTGAG	-	-	splice_donor_variant	NULL	Synthetic	deletion	HSD17B4	Deletion at splice donor site
+PTV093	5	131705587	CG	C	+	NM_003060.3:c.-75delG	NC_000005.9:131705590delG	-		5_prime_UTR_variant		Synthetic	deletion	0	Right-shifting deletion
+PTV094	5	148406482	T	C	-	NM_024577.3:c.2813A>G	NC_000005.9:g.148406482T>C	NP_078853.2:p.His938Arg	-	missense_variant	MISSENSE	Synthetic	substitution	SH3TC2	
+PTV095	6	110036337	T	TCAG	+	NM_014845.5:c.123_124insCAG	NC_000006.11:g.110036337_110036338insCAG	NP_055660.1:p.Ile41_Asp42insGln	-	inframe_insertion	NULL	Synthetic	insertion	FIG4	In frame insertion
+PTV096	6	110036337	TGAT	T	+	NM_014845.5:c.124_126delGAT	NC_000006.11:g.110036338_110036340delGAT	NP_055660.1:p.Asp42del	-	inframe_deletion	NULL	Synthetic	deletion	FIG4	In frame deletion; normalizes to 6:110036336:TTGA:T
+PTV097	6	152651802	C	A	-	NM_033071.3:c.13805G>T	NC_000006.11:g.152651802C>A	NP_149062.1:p.Arg4602Leu	-	missense_variant	MISSENSE	Synthetic	substitution	SYNE1	
+PTV098	6	152737643	C	G	-	NM_033071.3:c.5950G>C	NC_000006.11:g.152737643C>G	NP_149062.1:p.Ala1984Pro	-	missense_variant	MISSENSE	Synthetic	substitution	SYNE1	
+PTV099	7	6026775	T	C	-	NM_000535.5:c.1621G=	NC_000007.13:g.6026775T>C	NP_000526.1:p.Glu541=	-	synonymous_variant	NULL	dbSNP	substitution	PMS2	Discrepancy between the RefSeq transcript and Genomic Sequence; not corrected in GRCh38. Variant is present in pseudogene/paralog but is not marked as a possible PSV by NCBI.
+PTV100	7	55242465	GGAATTAAGAGAAGCA	G	+	NM_005228.3:c.2236_2250delGAATTAAGAGAAGCA	NC_000007.13:g.55242466_55242480delGAATTAAGAGAAGCA	NP_005219.2:p.Glu746_Ala750del	-	inframe_deletion		COSMIC	deletion	EGFR	0
+PTV101	7	55248980	C	CTCCAGGAAGCCT	+	NM_005228.3:c.2284-5_2290dupTCCAGGAAGCCT	NC_000007.13:g.55248981_55248992dupTCCAGGAAGCCT	NP_005219.2:p.Ala763_Tyr764insPheGlnGluAla	-	inframe_insertion		COSMIC	duplication	EGFR	p.A763_Y764insFQEA; in COSMIC as c.2290_2291insTCCAGGAAGCCT; COSMIC reports a second entry based on p. but the c. is unknown (COSM1684688); vcf left shifts to 55248980, right shift is at position 55248992
+PTV102	7	75932111	C	A	+	NM_001540.3:c.82C>A	NC_000007.13:g.75932111C>A	NP_001531.1:p.Leu28Ile	-	missense_variant	MISSENSE	Synthetic	substitution	HSPB1	
+PTV103	7	91652178	A	AAAC	+	NM_005751.4:c.4004_4006dupAAC	NC_000007.13:g.91652179_91652181dup 	NP_005742.4:p.Lys1335_Leu1336insGln	-	inframe_insertion	NULL	ClinVar	duplication	AKAP9	Indel; normalizes to 7:91652181:A:AAAC; without normalization HGVS is c.4011_4012insCAA
+PTV104	7	117199644	ATCT	A	+	NM_000492.3:c.1521_1523delCTT	NC_000007.13:g.117199646_117199648delCTT	NP_000483.3:p.Phe508del	-	inframe_deletion	NULL	Synthetic	deletion	CFTR	CFTR in frame deletion (delta 508) requires left shifting
+PTV105	7	140453136	AC	CT		NM_004333.4:c.1798_1799delinsAG 	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel		
+PTV106	7	140453136	A	C	-	NM_004333.4:c.1798_1799delinsAG 	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel	BRAF	
+PTV107	7	140453137	C	T	-	NM_004333.4:c.1798_1799delinsAG	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel	BRAF	
+PTV108	7	143013488	A	T	+	NM_000083.2:c.180+3A>T	NC_000007.13:g.143013488A>T	-	-	intron_variant	NULL	dbSNP	substitution	CLCN1	
+PTV109	7	143018934	G	A	+	NM_000083.2:c.689G>A	NC_000007.13:g.143018934G>A	NP_000074.2:p.Gly230Glu	-	missense_variant	MISSENSE	ClinVar	substitution	CLCN1	
+PTV110	7	143048771	C	T	+	NM_000083.2:c.2680C>T	NC_000007.13:g.143048771C>T	NP_000074.2:p.Arg894*	-	stop_gained	NONSENSE	ClinVar	substitution	CLCN1	
+PTV111	8	1871951	C	T	+	NM_014629.2:c.2399C>T	NC_000008.10:g.1871951C>T	NP_055444.2:p.Pro800Leu	-	missense_variant	MISSENSE	Synthetic	substitution	ARHGEF10	
+PTV112	9	13112056	T	TG	-	NM_003829.4:c.5603dupC	NC_000009.11:g.13112057dupG	NP_003820.2:p.Thr1869Asnfs*15	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	MPDZ	
+PTV113	9	21971208	C	A	-	NM_000077.4:c.151-1G>T	NC_000009.11:g.21971208C>A	-	-	splice_acceptor_variant		Synthetic	substitution	CDKN2A	
+PTV114	9	35683240	T	TG	-	NM_003289.3:c.773-3dupC	NC_000009.11:g.35683240_35683241insG	-	-	intron_variant	NULL	ClinVar	insertion	TPM2	
+PTV115	9	135796754	G	A	-	NM_000368.4:c.733C>T	NC_000009.11:g.135796754G>A	NP_000359.1:p.Arg245*	-	stop_gained	NONSENSE	ClinVar	substitution	TSC1	
+PTV014	10	89623035	CGCA	C	-	NM_001126049.1:c.-794_-792delTGC	NC_000010.10:g.89623039_89623041delGCA	-		5_prime_UTR_variant		ClinVar	deletion	KLLN	5'UTR and right shifting; ClinVar has the incorrect syntax
+PTV015	11	62457852	C	A	-	NM_032667.6:c.1184G>T	NC_000011.9:g.62457852C>A	NP_116056.3:p.Cys395Phe	-	missense_variant	MISSENSE	Synthetic	substitution	BSCL2	
+PTV016	11	108178710	A	AT	+	NM_000051.3:c.5761_5762insT	NC_000011.9:g.108178711_108178712insT	NP_000042.3:p.Arg1921Metfs*	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	ATM	End of exon variant
+PTV017	11	111735981	G	A	-	NM_024740.2:c.406-7C>T	NC_000011.9:g.111735981G>A	-	-	splice_acceptor_variant	NULL	dbSNP	substitution	ALG9	
+PTV018	12	11023080	C	A	-	NM_021625.4:c.1701C>G	NC_000012.11:g.110230580G>C	NP_067638.3:p.Tyr567*	-	stop_gained	NONSENSE	Synthetic	substitution	TRPV4	
+PTV019	12	22018712	TC	T	-	NM_005691.2:c.2199-1302delG	NC_000012.11:g.22018713delC	-	-	intron_variant	NULL	Synthetic	deletion	ABCC9	Variant with multiple transcripts (At least 3 NM for this gene)
+PTV020	12	52912946	T	C	-	NM_000424.3:c.556-2A>G	NC_000012.11:g.52912946T>C	-	-	splice_acceptor_variant	MISSENSE	Synthetic	substitution	DMD	
+PTV021	12	103234292	TC	T	-	NM_000277.1:c.1200-1delG	NC_000012.11:g.103234294delC	-	-	splice_acceptor_variant	NULL	ClinVar	deletion	PAH	Exception to right-shifting rule because at intron-exon boundary
+PTV023	12	103311124	T	C	-	NM_000277.1:c.-215A>G	NC_000012.11:g.103311124T>C	-	-	5_prime_UTR_variant		Synthetic	substitution	0	
+PTV024	12	111064166	G	A	+	NM_001082538.2:c.342-1G>A	NC_000012.11:g.111064166G>A	-		splice_acceptor_variant		Synthetic	substitution	JBTS13|TECT1	
+PTV025	12	123738430	CA	C	+	NM_152269.4:c.210delA	NC_000012.11:g.123738431delA	NP_689482.1:p.Gly72Alafs*13	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	C12orf65	Frameshift variant
+PTV026	13	31789169	CT	C	-	NM_194318.3:c.71-5delT	NC_000013.10:g.31789183delT	-	-	intron_variant	NULL	Emory	deletion	B3GALTL	Poly_T_left_shifting dbSNP reported as 13:31789183
+PTV027	14	62187287	G	A	+	NM_001530.3:c.223G>A	NC_000014.8:g.62187287G>A	NP_001521.1:p.Ala75Thr		missense_variant		Synthetic	substitution	HIF1A	Missense variant
+PTV028	14	62188231	TT	GA	+	NM_001530.3:c.231_232delinsGA	NC_000014.8:g.62188231_62188232delinsGA 	NP_001521.1:p.Asp77_Leu78delinsGluMet		insertion_deletion		Synthetic	indel	HIF1A	
+PTV029	14	63174827	C	A	-	NM_001530.3:c.2366G>T	NC_000014.8:g.63174827C>A	NP_647479.2:p.Gly789Val	-	missense_variant	MISSENSE	Synthetic	substitution	KCNH5	
+PTV030	15	42680000	CA	C	+	NM_000070.2:c.550delA	NC_000015.9:g.42680002delA	NP_000061.1:p.Thr184Argfs*36	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	CAPN3	Lefting shifting deletiona
+PTV030	15	42680000	CA	CAA	+	NM_000070.2:c.550dupA	NC_000015.9:g.42680002dupA	NP_000061.1:p.Thr184Asnfs*16	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	CAPN3	
+PTV031	15	42703179	T	TTCA	+	NM_000070.2:c.2361_2362insTCA	NC_000015.9:g.42703179_42703180insTCA	NP_000061.1:p.Val787_Arg788insSer	-	inframe_insertion	NULL	ClinVar	insertion	CAPN3	Single base deletion in RefSeq alignment. Note left shifting of genomic HGVS
+PTV033	15	42703179	TAG	TTCATCT	+	NM_000070.2:c.2362_2363delinsTCATCT	NC_000015.9:g.42703180_42703181delinsTCATCT	NP_000061.1:p.Arg788Serfs*14	-	frameshift_variant+missense_variant	NULL	ClinVar	indel	CAPN3	Complex block substitution involving the deletion of two bases and the insertion of six bases
+PTV034	15	48782203	C	T	-	NM_000138.4:c.2927G>A	NC_000015.9:g.48782203C>T	NP_000129.3:p.Arg976His	-	missense_variant	MISSENSE	ClinVar	substitution	FBN1	
+PTV035	15	72105929	CC	C	+	NM_014249.3:c.951C=	NC_000015.9:g.72105933delC	NP_055064.1:p.Asp316=	-	synonymous_variant	NULL	Synthetic	deletion	NR2E3	Discrepancy between the RefSeq transcript and Genomic Sequence; fixed in GRCh38; normalizes to 15:72105928:AC:A
+PTV036	15	89873415	G	A	-	NM_002693.2:c.752C>T	NC_000015.9:g.89873415G>A	NP_002684.1:p.Thr251Ile	-	missense_variant	MISSENSE	ClinVar	substitution	POLG	
+PTV037	16	2103394	C	T	+	NM_000548.3:c.277C>T	NC_000016.9:g.2103394C>T	NP_000539.2:p.Arg93Trp	-	missense_variant	MISSENSE	ClinVar	substitution	TSC2	
+PTV038	16	3779300	C	G	-	NM_004380.2:c.5748G>C	NC_000016.9:g.3779300C>G	NP_004371.2:p.Met1916Ile	-	missense_variant	MISSENSE	Synthetic	substitution	CREBBP	
+PTV039	16	5128843	C	G	+	NM_019109.4:c.826C>G	NC_000016.9:g.5128843C>G	NP_061982.3:p.Arg276Gly	-	missense_variant	MISSENSE	Synthetic	substitution	ALG1	
+PTV040	16	74808559	C	T	-	NM_024306.4:c.95G>A	NC_000016.9:g.74808559C>T	NP_077282.3:p.Arg32His	-	missense_variant	MISSENSE	Synthetic	substitution	FA2H	
+PTV041	16	89574804	C	A	+	NM_003119.2:c.-22C>A	NC_000016.9:g.89574804C>A	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	SPG7	Substitution:  transcript has now been updated version
+PTV042	16	89574826	A	C	+	NM_003119.2:c.1A>C	NC_000016.9:g.89574826A>C	NP_003110.1:p.Met1?	-	start_lost	NULL	Synthetic	substitution	SPG7	Variant in start codon
+PTV043	16	89574914	G	GT	+	NM_003119.2:c.90dupT	NC_000016.9:g.89574915dupT	NP_003110.1:p.Pro31Serfs*43	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	SPG7	Single base pair insertion
+PTV044	16	89574916	C	CGTC	+	NM_003119.2:c.89_91dupGTC	NC_000016.9:g.89574914_89574916dupGTC	NP_003110.1:p.Ser30_Pro31insArg	-	inframe_insertion	NULL	Synthetic	duplication	SPG7	Inframe duplication; normalizes to 16:89574913:A:AGTC
+PTV045	16	89575009	G	A	+	NM_003119.2:c.183+1G>A	NC_000016.9:g.89575009G>A	-	-	splice_donor_variant	NULL	Synthetic	substitution	SPG7	
+PTV046	16	89575040	C	A	+	NM_003119.2:c.183+32C>A	NC_000016.9:g.89575040C>A	-	-	intron_variant	NULL	Synthetic	substitution	SPG7	
+PTV046	16	89575040	C	CA	+	NM_003119.2:c.183+32_183+33insA	NC_000016.9:g.89575040_89575041insA	-	-	intron_variant	NULL	Synthetic	insertion	SPG7	
+PTV047	16	89576896	A	C	+	NM_003119.2:c.184-2A>C	NC_000016.9:g.89576896A>C	-	-	splice_acceptor_variant	NULL	Synthetic	substitution	SPG7	
+PTV048	16	89576930	T	TA	+	NM_003119.2:c.216_217insA	NC_000016.9:g.89576930T>TA	NP_003110.1:p.Glu73Argfs*30	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	SPG7	
+PTV048	16	89576930	T	TT	+	NM_003119.2:c.216dupT	NC_000016.9:g.89576930dupT	NP_003110.1:p.Glu73*	-	stop_gained	NONSENSE	Synthetic	duplication	SPG7	SNV in middle of exon
+PTV049	16	89576931	G	GTG	+	NM_003119.2:c.216_217dupTG	NC_000016.9:g.89576930dupTG	NP_003110.1:p.Glu73Valfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	SPG7	Duplication in middle of exon; normalizes to 16:89576929:T:TTG
+PTV050	16	89598368	CGGCCCCCCCGGCTGTGGGAAGACGCT	C	+	NM_003119.2:c.1046_1071delGCCCCCCCGGCTGTGGGAAGACGCTG	NC_000016.9:g.89598369_89598394delGGCCCCCCCGGCTGTGGGAAGACGCT	NP_003110.1:p.Gly349Alafs*38	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SPG7	Right-shifting deletion
+PTV051	16	89613064	AGGAGAGGCG	AT	+	NM_003119.2:c.1454_1462delinsT	NC_000016.9:g.89613070_89613078delinsT	NP_003110.1:p.Arg485Ilefs*3	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SPG7	Given the context of the local sequence it is difficult to determine whether this variant event overlies the canonical splice acceptor site or is an in-frame deletion.
+PTV052	16	89613145	C	T	+	NM_003119.2:c.1529C>T	NC_000016.9:g.89613145C>T	NP_003110.1:p.Ala510Val	-	missense_variant	MISSENSE	ClinVar	substitution	SPG7	
+PTV053	17	7578194	GCAC	G	-	NM_000546.5:c.652_654delGTG	NC_000017.10:g.7578195_7578197delCAC	NP_000537.3:p.Val218del		inframe_deletion		COSMIC	deletion		
+PTV054	17	7578523	T	TG	-	NM_000546.5:c.406dupC	NC_000017.10:g.7578524dupG	NP_000537.3:p.Gln136Profs*13		frameshift_variant	-	COSMIC	duplication	TP53	
+PTV055	17	17119692	A	C	-	NM_144997.5:c.1300+2T>G	NC_000017.10:g.17119692A>C	-	-	splice_donor_variant	NULL	Synthetic	substitution	FLCN	Variant on reverse strand at 5' of intron
+PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197592_41197589delGACA	-		3_prime_UTR_variant		ClinVar	deletion	BRCA1	3'UTR and right shifting: ClinVar has the incorrect syntax: c.*102_*105delCTGT
+PTV057	17	41256884	C	G	-	NM_007294.3:c.301+1G>C	NC_000017.10:g.41256884C>G	-	-	splice_donor_variant	NULL	ClinVar	substitution	BRCA1	Variant on gene with alternative transcripts
+PTV058	17	42991428	C	A	-	NM_002055.4:c.490G>T	NC_000017.10:g.42991428C>A	NP_002046.1:p.Glu164*	-	stop_gained	NONSENSE	Synthetic	substitution	GFAP	
+PTV059	17	48252809	A	T	+	NM_000023.2:c.*11A>T	NC_000017.10:g.48252809A>T	-		3_prime_UTR_variant		Synthetic	substitution	SGCA	
+PTV060	17	62022709	G	GTC	-	NM_000334.4:c.3720+9_3720+10dupGA	NC_000017.10:g.62022710_62022711dupGT	-	-	intron_variant	NULL	Synthetic	duplication	SCN4A	
+PTV061	17	62022711	C	CT	-	NM_000334.4:c.3720+8_3720+9insA	NC_000017.10:g.62022711_62022712insT	-	-	intron_variant	NULL	Synthetic	insertion	SCN4A	Variant on reverse strand
+PTV062	17	62023005	G	GGC	-	NM_000334.4:c.3442-8_3442-7insGC	NC_000017.10:g.62023005_62023006insGC	-	-	intron_variant	NULL	Synthetic	insertion	SCN4A	
+PTV063	17	62023006	C	A	-	NM_000334.4:c.3442-8G>T	NC_000017.10:g.62023006C>A	-	-	intron_variant	NULL	Synthetic	substitution	SCN4A	
+PTV064	17	62034787	G	A	-	NM_000334.4:c.2111C>T	NC_000017.10:g. 62034787G>A	NP_000325.4:p.Thr704Met	-	missense_variant	MISSENSE	ClinVar	substitution	SCN4A	
+PTV065	18	24128261	GTCCTCC	G	-	NM_001142730.2:c.234_239delGGAGGA	NC_000018.9:g.24128262_24128267delTCCTCC	NP_001136202.1:p.Glu78_Glu79del	-	inframe_deletion	NULL	Synthetic	deletion	KCTD1	Variant on reverse strand
+PTV066	19	15291774	G	A	-	NM_000435.2:c.2992C>T	NC_000019.9:g.15291774G>A	NP_000426.2:p.Gln998*	-	stop_gained	NONSENSE	Synthetic	substitution	NOTCH3	
+PTV067	19	15311794	A	G	-	NM_000435.2:c.-78T>C	NC_000019.9:g.15311794A>G	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	NOTCH3	SNV at 5' of exon
+PTV068	19	39076592	G	A	+	NM_000540.2:c.14818G>A	NC_000019.9:g.39076592G>A	NP_000531.2:p.Ala4940Thr	-	missense_variant	MISSENSE	ClinVar	substitution	RYR1	
+PTV069	19	41123094	G	GG	+	NM_003573.2:c.3125G=	NC_000019.9:g.41123095dupG	NP_003564.2:p.Gly1042=	-	synonymous_variant	NULL	dbSNP	duplication	LTBP4	Discrepancy between the RefSeq transcript and Genomic Sequence; normalizes to 19:41123093:A:AG
+PTV081	21	43897396	C	T	+	NM_080860.2:c.727+5G>A	NC_000021.8:g.43897396C>T	-	-	intron_variant	NULL	Synthetic	substitution	RSPH1	
+PTV082	22	30064360	G	GCGACGC	+	NM_000268.3:c.924_925insCGACGC	NC_000022.10:g.30064360_30064361insCGACGC	NP_000259.1:p.Arg310_Arg311dup	-	inframe_insertion	NULL	Synthetic	insertion	NF2	
+PTV083	22	51135988	GGTT	G	+	NM_033517.1:c.1307_1309delGTT	NC_000022.10 :g.51135989_51135991delGCA	NP_277052.1:p.(=)		frameshift_variant+missense_variant	NULL	Synthetic	deletion	SHANK3	Variant on SHANK3 transcript; genomic artifact due to a discrepancy between the RefSeq transcript and Genomic Sequence
+PTV116	HG536_PATCH	10391	AC	A	-	NM_005247.2:c.616delG	NW_003571046.1:g.10392delC	NP_005238.1:p.Val206Serfs	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	FGF3	ClinVar variant on Fix patch
+PTV117	HG865_PATCH	33547	G	A	-	NM_012309.3:c.2566C>T	NW_004070871.1:g.335476G>A	NP_036441.2:p.Leu856=		synonymous_variant	NULL	Synthetic	substitution	SHANK2	Coding change in SHANK2 transcript
+PTV118	HG865_PATCH	569441	G	T	-	NM_012309.3:c.960C>A	NW_00407087.1:g.569441G>T	NP_036441.2:p.320Tyr*	-	stop_gained	NONSENSE	Synthetic	substitution	SHANK2	Variant in fix patch: NW_00407087.1
+PTV119	HG865_PATCH	574546	C	T	NA	NM_012309.3:c.899A>G	NW_004070871.1:g.586648T>C	NP_036441.2:p.His300Arg	-	missense_variant	NULL	Synthetic	substitution	SHANK2	Coding change in SHANK2 transcript
+PTV120	HSCHR1_1_CTG31	133178	TAG	T	-	NM_020699.2:c.1254_1255delGC	NW_003315905.1:g.133179_133180delAG	NP_065750.1:p.Pro337Glnfs	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	GATAD2B	Novel patch: NW_003315905.1; previously_NW_003315905.1
+PTV121	HSCHR6_MHC_MANN_CTG1	3848158	T	G	-	NM_021983.4:c.490G>C	NT_167246.1:g.3848158T>G	NP_068818.4:p.Gly164Arg	-	missense_variant	MISSENSE	Synthetic	substitution	HLA-DRB4	In a region unique to the alt; previously_NT_167246.1
+PTV122	HSCHR6_MHC_MANN_CTG1	3851043	C	A	-	NM_021983.4:c.346G>T	NT_167246.1:g.3851043C>A	NP_068818.4:p.Glu116*	-	stop_gained	MISSENSE	Synthetic	substitution	HLA-DRB4	In a region unique to the alt; formerly p.Val116Ter, should be p.Glu116Ter; previously_NT_167246.1
+PTV123	X	70443101	C	T	+	NM_000166.5:c.-101C>T	NC_000023.10:g.70443101C>T	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	GJB1	
+PTV124	X	107845202	GACCACC	GACC	+	NM_000495.4:c.2133_2135delACC	NC_000023.10:g.107845206_107845209delACC	NP_000486.1:p.Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	
+PTV124	X	107845202	GACCACC	G	+	NM_000495.4:c.2130_2135delACCACC	NC_000023.10:g.107845203_107845209delACCACC	NP_000486.1:p.Pro711_Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Duplicate amino acids on both side to convert frameshift to in-frame deletion
+PTV125	X	153296777	G	A	-	NM_004992.3:c.502C>T	NC_000023.10:g.153296777G>A	NP_004983.1:p.Arg168*	-	stop_gained	NONSENSE	ClinVar	substitution	MECP2	
