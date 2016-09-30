@@ -45,6 +45,13 @@ Future plans
 - Cross-verify duplication and insertion sequences
 - Include HGVS validation test set (will be up soon)
 
+Requirements
+-------------------
+
+To install:
+
+pip install -r requirements.txt
+
 
 Unit Tests
 -------------------
@@ -102,7 +109,7 @@ compare_hgvs(hgvs1, hgvs2)
 'no'
 
 hgvs1 = 'NP_005647.3:p.Q29fs'
-hgvs2 = 'NP_005647.3:p.Q29Terfs'
+hgvs2 = 'NP_005647.3:p.Q29Ter'
 compare_hgvs(hgvs1, hgvs2)
 'no'
 
@@ -120,6 +127,16 @@ hgvs.name
 
 hgvs.type
 'substitution'
+
+
+# Basic transcript manipulation
+
+hgvs1 = 'NM_004958.3'
+t = Transcript(hgvs1)
+t.name = 'NM_004958.3'
+t.version = '3'
+t.accession = 'NM_004958'
+
 ```
 
 Example script
