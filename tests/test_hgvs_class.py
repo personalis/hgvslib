@@ -185,6 +185,48 @@ class test_compare_protein_coding_hgvs(unittest.TestCase):
 		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
 		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
 
+	def test_compare_function_on_ext_1(self):
+		self.query ='p.Ter330Trpext*?'
+		self.ref='p.Ter330TrpextTer19'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
+	def test_compare_function_on_ext_2(self):
+		self.query ='p.Ter330Trp'
+		self.ref='p.Ter330Trpext*?'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
+	def test_compare_function_on_ext_3(self):
+		self.query ='p.Ter330TrpextTer19'
+		self.ref='p.Ter330Trp'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
+	def test_compare_function_on_synonymous(self):
+		self.query ='p.Ter194='
+		self.ref='p.Ter194Ter'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
+	def test_compare_function_on_synonymous_2(self):
+		self.query ='p.Pro401Pro='
+		self.ref='p.Pro401Pro'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
+	def test_compare_function_on_mnv(self):
+		self.query ='p.Phe334_Val335delinsLeuMet'
+		self.ref='p.PheVal334LeuMet'
+		self.check = c.EQUIVALENT
+		message = '%s, %s, %s, %s.' % (self._testMethodName, self.query, self.ref, self.check)
+		self.assertEqual(compare_hgvs(self.query, self.ref ), self.check)
+
 
 	#--------------------------------------------------------------------------------
 	# check coding deletions

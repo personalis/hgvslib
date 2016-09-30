@@ -9,7 +9,7 @@ class Transcript(object):
 	def __init__(self, name):
 
 		self.name = name
-		self.no_version = ''
+		self.version = ''
 		if '.' in self.name:
 			self.accession, self.version = self.name.split('.')
 		else:
@@ -19,19 +19,25 @@ class Transcript(object):
 	# checks if the transcript matches a given transcript input
 	def check_transcript_ref(self,ref):
 
+		print "checking", self.name, ref
 		if self.name == ref:
+			print "exact"
 			return c.EXACT
 
 		elif self.name in c.NULL_SET or ref in c.NULL_SET or not ref:
+			print "null"
 			return c.NO_MATCH
 
-		elif '.' in ref:
-			ref, ref_version = ref.split('.')
-			print self.accession, ref
+		elif '\.' in ref:
+			ref, ref_version = ref.split('\.')
+			print "looking at version",self.accession, ref
 			if self.accession == ref:
+				print "version"
 				return 'yes,version'
 			else:
+				print "no match version"
 				return c.NO_MATCH
 
 		else:
+			print "no match"
 			return c.NO_MATCH

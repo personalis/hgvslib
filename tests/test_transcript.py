@@ -20,4 +20,4 @@ class test_transcript_object(unittest.TestCase):
 		trans = Transcript(self.transcript)
 
 		print "Check %s.." % (self._testMethodName)
-		self.assertEqual((self.refseq, self.version), (trans.no_version, trans.version))
+		self.assertEqual((self.refseq, self.version), (trans.accession, trans.version))

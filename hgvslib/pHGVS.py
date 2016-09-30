@@ -396,7 +396,7 @@ class pHGVS(object):
 
 		# some formatting
 		elif ':' in hgvs_str:
-			refseq_id, phgvs = phgvs.split(':')
+			refseq_id, phgvs = hgvs_str.split(':')
 			# remove brackets that are not associated with p.(=)
 			if phgvs.startswith('(') and phgvs.endswith(')'):
 				phgvs = phgvs.rstrip(')').lstrip('(')
@@ -438,12 +438,20 @@ class pHGVS(object):
 	def check_p_hgvs(cls, hgvs_obj1, hgvs_obj2):
 
 
+		# ensure that strings are converted into pHGVS instances except for null variants
 		hgvs_obj1 = pHGVS.is_phgvs_instance(hgvs_obj1)
 		hgvs_obj2 = pHGVS.is_phgvs_instance(hgvs_obj2)
 
-		if is_null(hgvs_obj1) and is_null(hgvs_obj2) or (not hgvs_obj1.name and not hgvs_obj2.name):
+		# check to see if both input hgvs_obj are null variants
+		if (is_null(hgvs_obj1) and is_null(hgvs_obj2)):
 			if hgvs_obj1 == hgvs_obj2:      return c.EXACT
 			else:                           return c.EQUIVALENT
+
+		# basically because an empty hgvs_obj will not have a name attribute, need to make sure that the
+		# pHGVS object exists for both hgvs_obj1 and hgvs_obj3, and then check that the name strings exist
+		elif (not (not hgvs_obj1) and not (not hgvs_obj2)) and (not hgvs_obj1.name and not hgvs_obj2.name):
+			if hgvs_obj1 == hgvs_obj2:      return c.EXACT
+			else:                           return c.EQUIVALENT			
 
 		elif is_null(hgvs_obj1) or is_null(hgvs_obj2):
 			return c.NO_MATCH

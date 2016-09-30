@@ -483,8 +483,6 @@ class test_check_null_variant(unittest.TestCase):
 		self.query =""
 		self.ref="p.Gly23Gly"
 		self.check="no"
-
-
 		message = "%s, %s, %s, %s." % (self._testMethodName, self.query, self.ref, self.check)
 		self.assertEqual(pHGVS.check_p_hgvs(self.query, self.ref ), self.check)
 
