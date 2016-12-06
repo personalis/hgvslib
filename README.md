@@ -145,6 +145,10 @@ Example script
 The example script reads in a file to compare, for each variant, three different annotations 
 with a reference HGVS string. The result of the comparison: an exact match 'yes', equivalent 
 'yes_m' or non-match 'no'.
+
+Note: the example VCF file hgvs_test_cases.vcf has been normalized with vt-normalize
+https://github.com/atks/vt.
+
  
 ```python
 python example/example_check_variants.py --infile example/test_file.txt

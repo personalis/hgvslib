@@ -88,7 +88,7 @@ PTV045	16	89575009	G	A	+	NM_003119.2:c.183+1G>A	NC_000016.9:g.89575009G>A	-	-	sp
 PTV046	16	89575040	C	A	+	NM_003119.2:c.183+32C>A	NC_000016.9:g.89575040C>A	-	-	intron_variant	NULL	Synthetic	substitution	SPG7	
 PTV046	16	89575040	C	CA	+	NM_003119.2:c.183+32_183+33insA	NC_000016.9:g.89575040_89575041insA	-	-	intron_variant	NULL	Synthetic	insertion	SPG7	
 PTV047	16	89576896	A	C	+	NM_003119.2:c.184-2A>C	NC_000016.9:g.89576896A>C	-	-	splice_acceptor_variant	NULL	Synthetic	substitution	SPG7	
-PTV048	16	89576930	T	TA	+	NM_003119.2:c.216_217insA	NC_000016.9:g.89576930T>TA	NP_003110.1:p.Glu73Argfs*30	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	SPG7	
+PTV048	16	89576930	T	TA	+	NM_003119.2:c.216_217insA	NC_000016.9:g.89576930_89576931insA	NP_003110.1:p.Glu73Argfs*30	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	SPG7	
 PTV048	16	89576930	T	TT	+	NM_003119.2:c.216dupT	NC_000016.9:g.89576930dupT	NP_003110.1:p.Glu73*	-	stop_gained	NONSENSE	Synthetic	duplication	SPG7	SNV in middle of exon
 PTV049	16	89576931	G	GTG	+	NM_003119.2:c.216_217dupTG	NC_000016.9:g.89576930dupTG	NP_003110.1:p.Glu73Valfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	SPG7	Duplication in middle of exon; normalizes to 16:89576929:T:TTG
 PTV050	16	89598368	CGGCCCCCCCGGCTGTGGGAAGACGCT	C	+	NM_003119.2:c.1046_1071delGCCCCCCCGGCTGTGGGAAGACGCTG	NC_000016.9:g.89598369_89598394delGGCCCCCCCGGCTGTGGGAAGACGCT	NP_003110.1:p.Gly349Alafs*38	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SPG7	Right-shifting deletion
