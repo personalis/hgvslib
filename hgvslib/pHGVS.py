@@ -504,6 +504,18 @@ class pHGVS(object):
 			return AminoAcid.triplet_from_singlet(amino_singlet)
 		return amino_singlet
 
+	@classmethod
+	def replace_amino_acid_triplet(cls, amino_acid_triplet_re):
+		'''
+		Finds all triplet amino acid occurrences and replaces them with singlet amino acid
+		'''
+		amino_acid_triplet = None
+		if amino_acid_triplet_re is not None:
+			amino_acid_triplet = amino_acid_triplet_re.group(1)
+		if amino_acid_triplet and amino_acid_triplet in c.AMINO_ACID_TRIPLETS:
+			return AminoAcid.singlet_from_triplet(amino_acid_triplet)
+		return amino_acid_triplet
+
 
 	@classmethod
 	def hgvs_triplet_from_singlet(cls, hgvs_str):
@@ -513,6 +525,16 @@ class pHGVS(object):
 		if not hgvs_str:
 			return ''
 		hgvs = re.sub(r'([A-Z])', pHGVS.replace_amino_acid_singlet, hgvs_str)
+		return hgvs
+
+	@classmethod
+	def hgvs_singlet_from_triplet(cls, hgvs_str):
+		'''
+		Converts singlet amino acid to triplet
+		'''
+		if not hgvs_str:
+			return ''
+		hgvs = re.sub(r'([A-Z][a-z][a-z])', pHGVS.replace_amino_acid_triplet, hgvs_str)
 		return hgvs
 
 	@classmethod
