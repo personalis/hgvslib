@@ -101,7 +101,7 @@ PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197
 PTV057	17	41256884	C	G	-	NM_007294.3:c.301+1G>C	NC_000017.10:g.41256884C>G	-	-	splice_donor_variant	NULL	ClinVar	substitution	BRCA1	Variant on gene with alternative transcripts
 PTV058	17	42991428	C	A	-	NM_002055.4:c.490G>T	NC_000017.10:g.42991428C>A	NP_002046.1:p.Glu164*	-	stop_gained	NONSENSE	Synthetic	substitution	GFAP	
 PTV059	17	48252809	A	T	+	NM_000023.2:c.*11A>T	NC_000017.10:g.48252809A>T	-		3_prime_UTR_variant		Synthetic	substitution	SGCA	
-PTV060	17	62022709	G	GTC	-	NM_000334.4:c.3720+9_3720+10dupGA	NC_000017.10:g.62022710_62022711dupGT	-	-	intron_variant	NULL	Synthetic	duplication	SCN4A	
+PTV060	17	62022709	G	GTC	-	NM_000334.4:c.3720+9_3720+10dupGA	NC_000017.10:g.62022710_62022711dupTC	-	-	intron_variant	NULL	Synthetic	duplication	SCN4A	
 PTV061	17	62022711	C	CT	-	NM_000334.4:c.3720+8_3720+9insA	NC_000017.10:g.62022711_62022712insT	-	-	intron_variant	NULL	Synthetic	insertion	SCN4A	Variant on reverse strand
 PTV062	17	62023005	G	GGC	-	NM_000334.4:c.3442-8_3442-7insGC	NC_000017.10:g.62023005_62023006insGC	-	-	intron_variant	NULL	Synthetic	insertion	SCN4A	
 PTV063	17	62023006	C	A	-	NM_000334.4:c.3442-8G>T	NC_000017.10:g.62023006C>A	-	-	intron_variant	NULL	Synthetic	substitution	SCN4A	
