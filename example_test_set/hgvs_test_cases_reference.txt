@@ -3,7 +3,7 @@ PTV001	1	5935162	A	T	-	NM_015102.3:c.2818-2T>A	NC_000001.10:g.5935162A>T	-		spli
 PTV002	1	12065948	C	T	+	NM_014874.3:c.1676C>T	NC_000001.10:g.12065948C>T	NP_055689.1:p.Pro559Leu	-	missense_variant	MISSENSE	Synthetic	substitution	CMT2A|CMT2A2|CPRP1|HSG|MARF	
 PTV003	1	46655125	CTCAC	C	-	NM_017739.3:c.1895+1_1895+4delGTGA	NC_000001.10:g.46655126_46655129delTCAC	-	-	splice_region_variant&intron_variant		ClinVar	deletion	POMGNT1	
 PTV004	1	68912523	TGAGCCAGAG	T	-	NM_000329.2:c.106_114delCTCTGGCTC	NC_000001.10:g.68912524_68912532delGAGCCAGAG	NP_000320.1:p.Leu36_Leu38del		inframe_deletion		ClinVar	deletion		
-PTV005	1	68912526	GCCAGAG	G	-	NM_000329.2:c.109_114delTGGCTC	NC_000001.10:g.68912527_68912532delCCAGAG	NP_000320:p.Trp37_Leu38del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Right shifting inframe deletion on reverse strand (genomic and transcript right shift).
+PTV005	1	68912526	GCCAGAG	G	-	NM_000329.2:c.109_114delTGGCTC	NC_000001.10:g.68912527_68912532delCCAGAG	NP_000320.1:p.Trp37_Leu38del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Right shifting inframe deletion on reverse strand (genomic and transcript right shift).
 PTV006	1	109817590	G	T	+	NM_001408.2:c.*919G>T	NC_000001.10:g.109817590G>T	-	-	3_prime_UTR_variant	NULL	ClinVar	substitution	CELSR2	3'UTR regulatory variant with association in ClinVar
 PTV007	1	145597475	GAAGT	G	-	NM_006468.6:c.1070+35_1070+38delACTT	NC_000001.10:g.145597476_145597479delAAGT	-		intron_variant; deletion	NULL	Synthetic	deletion	POLR3C	Strand changed in fix patch
 PTV008	1	153791300	CTG	C	+	NM_020699.2:c.562_563delCA	NC_000001.10:g.153791301_153791302delTG	NP_065750.1:p.Gln188Glufs*36	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	GATAD2B	
