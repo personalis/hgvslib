@@ -122,6 +122,6 @@ PTV120	HSCHR1_1_CTG31	133178	TAG	T	-	NM_020699.2:c.1254_1255delGC	NW_003315905.1
 PTV121	HSCHR6_MHC_MANN_CTG1	3848158	T	G	-	NM_021983.4:c.490G>C	NT_167246.1:g.3848158T>G	NP_068818.4:p.Gly164Arg	-	missense_variant	MISSENSE	Synthetic	substitution	HLA-DRB4	In a region unique to the alt; previously_NT_167246.1
 PTV122	HSCHR6_MHC_MANN_CTG1	3851043	C	A	-	NM_021983.4:c.346G>T	NT_167246.1:g.3851043C>A	NP_068818.4:p.Glu116*	-	stop_gained	MISSENSE	Synthetic	substitution	HLA-DRB4	In a region unique to the alt; formerly p.Val116Ter, should be p.Glu116Ter; previously_NT_167246.1
 PTV123	X	70443101	C	T	+	NM_000166.5:c.-101C>T	NC_000023.10:g.70443101C>T	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	GJB1	
-PTV124	X	107845202	GACCACC	GACC	+	NM_000495.4:c.2133_2135delACC	NC_000023.10:g.107845206_107845209delACC	NP_000486.1:p.Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	
-PTV124	X	107845202	GACCACC	G	+	NM_000495.4:c.2130_2135delACCACC	NC_000023.10:g.107845203_107845209delACCACC	NP_000486.1:p.Pro711_Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Duplicate amino acids on both side to convert frameshift to in-frame deletion
+PTV124	X	107845202	GACCACC	GACC	+	NM_000495.4:c.2133_2135delACC	NC_000023.10:g.107845206_107845208delACC	NP_000486.1:p.Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	
+PTV124	X	107845202	GACCACC	G	+	NM_000495.4:c.2130_2135delACCACC	NC_000023.10:g.107845203_107845208delACCACC	NP_000486.1:p.Pro711_Pro712del	-	inframe_deletion	NULL	Synthetic	deletion	COL4A5	Duplicate amino acids on both side to convert frameshift to in-frame deletion
 PTV125	X	153296777	G	A	-	NM_004992.3:c.502C>T	NC_000023.10:g.153296777G>A	NP_004983.1:p.Arg168*	-	stop_gained	NONSENSE	ClinVar	substitution	MECP2	
