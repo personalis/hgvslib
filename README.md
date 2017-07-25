@@ -1,6 +1,6 @@
 Summary Information
 -----------------------------
-Author: Jennifer Yen jennifer.yen@personalis.com
+Author: Jennifer Yen jennifer.lee.yen@gmail.com
 
 Brief description
 -----------------------------
