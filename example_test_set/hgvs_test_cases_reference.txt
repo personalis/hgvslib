@@ -97,7 +97,7 @@ PTV052	16	89613145	C	T	+	NM_003119.2:c.1529C>T	NC_000016.9:g.89613145C>T	NP_0031
 PTV053	17	7578194	GCAC	G	-	NM_000546.5:c.652_654delGTG	NC_000017.10:g.7578195_7578197delCAC	NP_000537.3:p.Val218del		inframe_deletion		COSMIC	deletion		
 PTV054	17	7578523	T	TG	-	NM_000546.5:c.406dupC	NC_000017.10:g.7578524dupG	NP_000537.3:p.Gln136Profs*13		frameshift_variant	-	COSMIC	duplication	TP53	
 PTV055	17	17119692	A	C	-	NM_144997.5:c.1300+2T>G	NC_000017.10:g.17119692A>C	-	-	splice_donor_variant	NULL	Synthetic	substitution	FLCN	Variant on reverse strand at 5' of intron
-PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197592_41197589delGACA	-		3_prime_UTR_variant		ClinVar	deletion	BRCA1	3'UTR and right shifting: ClinVar has the incorrect syntax: c.*102_*105delCTGT
+PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197589_41197592delGACA	-		3_prime_UTR_variant		ClinVar	deletion	BRCA1	3'UTR and right shifting: ClinVar has the incorrect syntax: c.*102_*105delCTGT
 PTV057	17	41256884	C	G	-	NM_007294.3:c.301+1G>C	NC_000017.10:g.41256884C>G	-	-	splice_donor_variant	NULL	ClinVar	substitution	BRCA1	Variant on gene with alternative transcripts
 PTV058	17	42991428	C	A	-	NM_002055.4:c.490G>T	NC_000017.10:g.42991428C>A	NP_002046.1:p.Glu164*	-	stop_gained	NONSENSE	Synthetic	substitution	GFAP	
 PTV059	17	48252809	A	T	+	NM_000023.2:c.*11A>T	NC_000017.10:g.48252809A>T	-		3_prime_UTR_variant		Synthetic	substitution	SGCA	
