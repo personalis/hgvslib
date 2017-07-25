@@ -68,7 +68,7 @@ PTV025	12	123738430	CA	C	+	NM_152269.4:c.210delA	NC_000012.11:g.123738431delA	NP
 PTV026	13	31789169	CT	C	-	NM_194318.3:c.71-5delT	NC_000013.10:g.31789183delT	-	-	intron_variant	NULL	Emory	deletion	B3GALTL	Poly_T_left_shifting dbSNP reported as 13:31789183
 PTV027	14	62187287	G	A	+	NM_001530.3:c.223G>A	NC_000014.8:g.62187287G>A	NP_001521.1:p.Ala75Thr		missense_variant		Synthetic	substitution	HIF1A	Missense variant
 PTV028	14	62188231	TT	GA	+	NM_001530.3:c.231_232delinsGA	NC_000014.8:g.62188231_62188232delinsGA 	NP_001521.1:p.Asp77_Leu78delinsGluMet		insertion_deletion		Synthetic	indel	HIF1A	
-PTV029	14	63174827	C	A	-	NM_001530.3:c.2366G>T	NC_000014.8:g.63174827C>A	NP_647479.2:p.Gly789Val	-	missense_variant	MISSENSE	Synthetic	substitution	KCNH5	
+PTV029	14	63174827	C	A	-	NM_139318.4:c.2366G>T	NC_000014.8:g.63174827C>A	NP_647479.2:p.Gly789Val	-	missense_variant	MISSENSE	Synthetic	substitution	KCNH5	
 PTV030	15	42680000	CA	C	+	NM_000070.2:c.550delA	NC_000015.9:g.42680002delA	NP_000061.1:p.Thr184Argfs*36	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	CAPN3	Lefting shifting deletiona
 PTV030	15	42680000	CA	CAA	+	NM_000070.2:c.550dupA	NC_000015.9:g.42680002dupA	NP_000061.1:p.Thr184Asnfs*16	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	CAPN3	
 PTV031	15	42703179	T	TTCA	+	NM_000070.2:c.2361_2362insTCA	NC_000015.9:g.42703179_42703180insTCA	NP_000061.1:p.Val787_Arg788insSer	-	inframe_insertion	NULL	ClinVar	insertion	CAPN3	Single base deletion in RefSeq alignment. Note left shifting of genomic HGVS
