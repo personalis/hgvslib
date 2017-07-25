@@ -10,7 +10,7 @@ PTV008	1	153791300	CTG	C	+	NM_020699.2:c.562_563delCA	NC_000001.10:g.153791301_1
 PTV009	1	156104666	TTGAGAGCCGGCTGGCGGATGCGCT	TCCCC	+	NM_005572.3:c.711_734delinsCCCC	NC_000001.10:g.156104667_156104690delinsCCCC	NP_005563.1:p.Glu238Profs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	LMNA -preferred	Right-shifting deletion resulting in different protein change
 PTV010	1	156108541	G	GG	+	NM_170707.3:c.1961dupG	NC_000001.10:g.156108541dupG	NP_733821.1:p.Thr655Asnfs*49	-	frameshift_variant+missense_variant	NULL	ClinVar	duplication	LMNA - also LMNA	Duplication; normalizes to 1:156108540:C:CG
 PTV011	1	161279695	T	A	-	NM_000530.6:c.1A>T	NC_000001.10:g.161279695T>A	NP_000521.2:p.Met1?	-	start_lost	NULL	Synthetic	substitution	MPZ	
-PTV012	1	169519049	T	.	-	NM_000139.4:c.1601G>A	NC_000001.10:g.169519049T=	NP_000121.2:p.Arg534Gln	-	missense_variant	MISSENSE	ClinVar	substitution	MS4A2	Leiden Factor V
+PTV012	1	169519049	T	.	-	NM_000130.4:c.1601G>A	NC_000001.10:g.169519049T=	NP_000121.2:p.Arg534Gln	-	missense_variant	MISSENSE	ClinVar	substitution	F5	Leiden Factor V
 PTV013	1	226125468	G	A	-	NM_003240.3:c.774C>T	NC_000001.10:g.226125468G>A	NP_003231.2:p.Thr258=	-	synonymous_variant	NULL	ClinVar	substitution	LEFTY2	LEFTY2 Paralog- intragene duplication
 PTV070	2	50149352	T	C	-	NM_001135659.1:c.4374A>G	NC_000002.11:g.50149352T>C	NP_001129131.1:p.Pro1458=	-	synonymous_variant	SILENT	ClinVar	substitution	NRXN1	RefSeq-Genomic Reference difference
 PTV071	2	50847195	G	A	-	NM_001135659.1:c.1405C>T	NC_000002.11:g.50847195G>A	NP_001129131.1:p.Pro469Ser	-	missense_variant	MISSENSE	ClinVar	substitution	NRXN1	
