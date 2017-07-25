@@ -56,7 +56,7 @@ PTV114	9	35683240	T	TG	-	NM_003289.3:c.773-3dupC	NC_000009.11:g.35683241dupG	-	-
 PTV115	9	135796754	G	A	-	NM_000368.4:c.733C>T	NC_000009.11:g.135796754G>A	NP_000359.1:p.Arg245*	-	stop_gained	NONSENSE	ClinVar	substitution	TSC1	
 PTV014	10	89623035	CGCA	C	-	NM_001126049.1:c.-794_-792delTGC	NC_000010.10:g.89623039_89623041delGCA	-		5_prime_UTR_variant		ClinVar	deletion	KLLN	5'UTR and right shifting; ClinVar has the incorrect syntax
 PTV015	11	62457852	C	A	-	NM_032667.6:c.1184G>T	NC_000011.9:g.62457852C>A	NP_116056.3:p.Cys395Phe	-	missense_variant	MISSENSE	Synthetic	substitution	BSCL2	
-PTV016	11	108178710	A	AT	+	NM_000051.3:c.5761_5762insT	NC_000011.9:g.108178711_108178712insT	NP_000042.3:p.Arg1921Metfs*	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	ATM	End of exon variant
+PTV016	11	108178710	A	AT	+	NM_000051.3:c.5761_5762insT	NC_000011.9:g.108178711_108178712insT	NP_000042.3:p.Arg1921Metfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	ATM	End of exon variant
 PTV017	11	111735981	G	A	-	NM_024740.2:c.406-7C>T	NC_000011.9:g.111735981G>A	-	-	splice_acceptor_variant	NULL	dbSNP	substitution	ALG9	
 PTV018	12	11023080	C	A	-	NM_021625.4:c.1701C>G	NC_000012.11:g.110230580G>C	NP_067638.3:p.Tyr567*	-	stop_gained	NONSENSE	Synthetic	substitution	TRPV4	
 PTV019	12	22018712	TC	T	-	NM_005691.2:c.2199-1302delG	NC_000012.11:g.22018713delC	-	-	intron_variant	NULL	Synthetic	deletion	ABCC9	Variant with multiple transcripts (At least 3 NM for this gene)
@@ -114,7 +114,7 @@ PTV069	19	41123094	G	GG	+	NM_003573.2:c.3125G=	NC_000019.9:g.41123095dupG	NP_003
 PTV081	21	43897396	C	T	+	NM_080860.2:c.727+5G>A	NC_000021.8:g.43897396C>T	-	-	intron_variant	NULL	Synthetic	substitution	RSPH1	
 PTV082	22	30064360	G	GCGACGC	+	NM_000268.3:c.924_925insCGACGC	NC_000022.10:g.30064360_30064361insCGACGC	NP_000259.1:p.Arg310_Arg311dup	-	inframe_insertion	NULL	Synthetic	insertion	NF2	
 PTV083	22	51135988	GGTT	G	+	NM_033517.1:c.1307_1309delGTT	NC_000022.10 :g.51135989_51135991delGCA	NP_277052.1:p.(=)		frameshift_variant+missense_variant	NULL	Synthetic	deletion	SHANK3	Variant on SHANK3 transcript; genomic artifact due to a discrepancy between the RefSeq transcript and Genomic Sequence
-PTV116	HG536_PATCH	10391	AC	A	-	NM_005247.2:c.616delG	NW_003571046.1:g.10392delC	NP_005238.1:p.Val206Serfs	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	FGF3	ClinVar variant on Fix patch
+PTV116	HG536_PATCH	10391	AC	A	-	NM_005247.2:c.616delG	NW_003571046.1:g.10392delC	NP_005238.1:p.Val206Serfs*117	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	FGF3	ClinVar variant on Fix patch
 PTV117	HG865_PATCH	33547	G	A	-	NM_012309.3:c.2566C>T	NW_004070871.1:g.335476G>A	NP_036441.2:p.Leu856=		synonymous_variant	NULL	Synthetic	substitution	SHANK2	Coding change in SHANK2 transcript
 PTV118	HG865_PATCH	569441	G	T	-	NM_012309.3:c.960C>A	NW_00407087.1:g.569441G>T	NP_036441.2:p.320Tyr*	-	stop_gained	NONSENSE	Synthetic	substitution	SHANK2	Variant in fix patch: NW_00407087.1
 PTV119	HG865_PATCH	574546	C	T	NA	NM_012309.3:c.899A>G	NW_004070871.1:g.586648T>C	NP_036441.2:p.His300Arg	-	missense_variant	NULL	Synthetic	substitution	SHANK2	Coding change in SHANK2 transcript
