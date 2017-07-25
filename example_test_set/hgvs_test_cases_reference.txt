@@ -52,7 +52,7 @@ PTV110	7	143048771	C	T	+	NM_000083.2:c.2680C>T	NC_000007.13:g.143048771C>T	NP_00
 PTV111	8	1871951	C	T	+	NM_014629.2:c.2399C>T	NC_000008.10:g.1871951C>T	NP_055444.2:p.Pro800Leu	-	missense_variant	MISSENSE	Synthetic	substitution	ARHGEF10	
 PTV112	9	13112056	T	TG	-	NM_003829.4:c.5603dupC	NC_000009.11:g.13112057dupG	NP_003820.2:p.Thr1869Asnfs*15	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	MPDZ	
 PTV113	9	21971208	C	A	-	NM_000077.4:c.151-1G>T	NC_000009.11:g.21971208C>A	-	-	splice_acceptor_variant		Synthetic	substitution	CDKN2A	
-PTV114	9	35683240	T	TG	-	NM_003289.3:c.773-3dupC	NC_000009.11:g.35683240_35683241insG	-	-	intron_variant	NULL	ClinVar	insertion	TPM2	
+PTV114	9	35683240	T	TG	-	NM_003289.3:c.773-3dupC	NC_000009.11:g.35683241dupG	-	-	intron_variant	NULL	ClinVar	insertion	TPM2	
 PTV115	9	135796754	G	A	-	NM_000368.4:c.733C>T	NC_000009.11:g.135796754G>A	NP_000359.1:p.Arg245*	-	stop_gained	NONSENSE	ClinVar	substitution	TSC1	
 PTV014	10	89623035	CGCA	C	-	NM_001126049.1:c.-794_-792delTGC	NC_000010.10:g.89623039_89623041delGCA	-		5_prime_UTR_variant		ClinVar	deletion	KLLN	5'UTR and right shifting; ClinVar has the incorrect syntax
 PTV015	11	62457852	C	A	-	NM_032667.6:c.1184G>T	NC_000011.9:g.62457852C>A	NP_116056.3:p.Cys395Phe	-	missense_variant	MISSENSE	Synthetic	substitution	BSCL2	
