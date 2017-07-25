@@ -31,7 +31,7 @@ PTV089	4	153332910	C	CAGG	-	NM_033632.3:c.45_46insCCT	NC_000004.11:g.153332910_1
 PTV090	5	1295183	G	A	-	NM_198253.2:c.-79C>T	NC_000005.9:g.1295183G>A	-	-	5_prime_UTR_variant	NULL	Synthetic	substitution	TERT 	TERT promoter mutation
 PTV091	5	77396835	TTTC	T	-	NM_003664.4:c.2409_2411delGAA	NC_000005.9:g.77396836_77396838del	NP_003655.3:p.Lys804del	-	inframe_deletion	NULL	ClinVar	deletion	AP3B1	
 PTV092	5	118811422	GGTGAG	G	-	NM_000414.3:c.302+1_302+5delGTGAG	NC_000005.9:g.118811423_118811427delGTGAG	-	-	splice_donor_variant	NULL	Synthetic	deletion	HSD17B4	Deletion at splice donor site
-PTV093	5	131705587	CG	C	+	NM_003060.3:c.-75delG	NC_000005.9:131705590delG	-		5_prime_UTR_variant		Synthetic	deletion	0	Right-shifting deletion
+PTV093	5	131705587	CG	C	+	NM_003060.3:c.-75delG	NC_000005.9:g.131705590delG	-		5_prime_UTR_variant		Synthetic	deletion	0	Right-shifting deletion
 PTV094	5	148406482	T	C	-	NM_024577.3:c.2813A>G	NC_000005.9:g.148406482T>C	NP_078853.2:p.His938Arg	-	missense_variant	MISSENSE	Synthetic	substitution	SH3TC2	
 PTV095	6	110036337	T	TCAG	+	NM_014845.5:c.123_124insCAG	NC_000006.11:g.110036337_110036338insCAG	NP_055660.1:p.Ile41_Asp42insGln	-	inframe_insertion	NULL	Synthetic	insertion	FIG4	In frame insertion
 PTV096	6	110036337	TGAT	T	+	NM_014845.5:c.124_126delGAT	NC_000006.11:g.110036338_110036340delGAT	NP_055660.1:p.Asp42del	-	inframe_deletion	NULL	Synthetic	deletion	FIG4	In frame deletion; normalizes to 6:110036336:TTGA:T
