@@ -56,7 +56,7 @@ PTV114	9	35683240	T	TG	-	NM_003289.3:c.773-3dupC	NC_000009.11:g.35683241dupG	-	-
 PTV115	9	135796754	G	A	-	NM_000368.4:c.733C>T	NC_000009.11:g.135796754G>A	NP_000359.1:p.Arg245*	-	stop_gained	NONSENSE	ClinVar	substitution	TSC1	
 PTV014	10	89623035	CGCA	C	-	NM_001126049.1:c.-794_-792delTGC	NC_000010.10:g.89623039_89623041delGCA	-		5_prime_UTR_variant		ClinVar	deletion	KLLN	5'UTR and right shifting; ClinVar has the incorrect syntax
 PTV015	11	62457852	C	A	-	NM_032667.6:c.1184G>T	NC_000011.9:g.62457852C>A	NP_116056.3:p.Cys395Phe	-	missense_variant	MISSENSE	Synthetic	substitution	BSCL2	
-PTV016	11	108178710	A	AT	+	NM_000051.3:c.5761_5762insT	NC_000011.9:g.108178711_108178712insT	NP_000042.3:p.Arg1921Metfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	ATM	End of exon variant
+PTV016	11	108178710	A	AT	+	NM_000051.3:c.5761_5762insT	NC_000011.9:g.108178710_108178711insT	NP_000042.3:p.Arg1921Metfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	ATM	End of exon variant
 PTV017	11	111735981	G	A	-	NM_024740.2:c.406-7C>T	NC_000011.9:g.111735981G>A	-	-	splice_acceptor_variant	NULL	dbSNP	substitution	ALG9	
 PTV018	12	11023080	C	A	-	NM_021625.4:c.1701C>G	NC_000012.11:g.110230580G>C	NP_067638.3:p.Tyr567*	-	stop_gained	NONSENSE	Synthetic	substitution	TRPV4	
 PTV019	12	22018712	TC	T	-	NM_005691.2:c.2199-1302delG	NC_000012.11:g.22018713delC	-	-	intron_variant	NULL	Synthetic	deletion	ABCC9	Variant with multiple transcripts (At least 3 NM for this gene)
