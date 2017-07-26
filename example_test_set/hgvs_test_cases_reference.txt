@@ -20,7 +20,7 @@ PTV074	2	166183371	A	G	+	NM_021007.2:c.2026A>G	NC_000002.11:g.166183371A>G	NP_06
 PTV075	2	166929889	GTCCAGGTCCT	GAC	-	NM_001165963.1:c.233_242delinsGT	NC_000002.11:g.166929890_166929899delinsAC	NP_001159435.1:p.Glu78Glyfs*7	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SCN1A	Normalizes to 2:166929890:TCCAGGTCCT:AC
 PTV076	2	166929891	CCAGGTCCT	C	-	NM_001165963.1:c.233_240delAGGACCTG	NC_000002.11:g.166929892_166929899delCAGGTCCT	NP_001159435.1:p.Glu78Glyfs*7	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SCN1A	
 PTV077	2	179393504	G	T	-	NM_133378.4:c.99270C>A	NC_000002.11:g.179393504G>T	NP_596869.4:p.Ser33090Arg	-	missense_variant	MISSENSE	Synthetic	substitution	TTN	
-PTV078	2	185803444	TGCAGCTGCTGCAGCTGCAGCTGCA	T	+	NM_194250.1:c.3324_3347delAGCTGCTGCAGCTGCAGCTGCAGC	NC_000002.11:g.185803445_185803468delGCAGCTGCTGCAGCTGCAGCTGCA	NP_919226.1:p.Ala1112_Ala1119del	-	inframe_deletion	NULL	Synthetic	deletion	ZNF804A	
+PTV078	2	185803444	TGCAGCTGCTGCAGCTGCAGCTGCA	T	+	NM_194250.1:c.3324_3347delAGCTGCTGCAGCTGCAGCTGCAGC	NC_000002.11:g.185803447_185803470delAGCTGCTGCAGCTGCAGCTGCAGC	NP_919226.1:p.Ala1112_Ala1119del	-	inframe_deletion	NULL	Synthetic	deletion	ZNF804A	
 PTV079	2	201950249	G	T	+	NM_002491.2:c.208G>T	NC_000002.11:g.201950249G>T	NP_002482.1:p.Gly70*	-	stop_gained	NONSENSE	ClinVar	substitution	NDUFB3	
 PTV080	2	238268730	C	A	-	NM_004369.3:c.6282+1G>T	NC_000002.11:g.238268730C>A	-	-	splice_donor_variant	NULL	ClinVar	substitution	COL6A3	
 PTV085	3	50402127	T	G	-	NM_006030.2:c.3402A>C	NC_000003.11:g.50402127T>G	NP_006021.2:p.Gln1134His	-	missense_variant	MISSENSE	dbSNP	substitution	CACNA2D2	
@@ -91,13 +91,13 @@ PTV047	16	89576896	A	C	+	NM_003119.2:c.184-2A>C	NC_000016.9:g.89576896A>C	-	-	sp
 PTV048	16	89576930	T	TA	+	NM_003119.2:c.216_217insA	NC_000016.9:g.89576930_89576931insA	NP_003110.1:p.Glu73Argfs*30	-	frameshift_variant+missense_variant	NULL	Synthetic	insertion	SPG7	
 PTV048	16	89576930	T	TT	+	NM_003119.2:c.216dupT	NC_000016.9:g.89576930dupT	NP_003110.1:p.Glu73*	-	stop_gained	NONSENSE	Synthetic	duplication	SPG7	SNV in middle of exon
 PTV049	16	89576931	G	GTG	+	NM_003119.2:c.216_217dupTG	NC_000016.9:g.89576930_89576931dupTG	NP_003110.1:p.Glu73Valfs*9	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	SPG7	Duplication in middle of exon; normalizes to 16:89576929:T:TTG
-PTV050	16	89598368	CGGCCCCCCCGGCTGTGGGAAGACGCT	C	+	NM_003119.2:c.1046_1071delGCCCCCCCGGCTGTGGGAAGACGCTG	NC_000016.9:g.89598369_89598394delGGCCCCCCCGGCTGTGGGAAGACGCT	NP_003110.1:p.Gly349Alafs*38	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SPG7	Right-shifting deletion
+PTV050	16	89598368	CGGCCCCCCCGGCTGTGGGAAGACGCT	C	+	NM_003119.2:c.1046_1071delGCCCCCCCGGCTGTGGGAAGACGCTG	NC_000016.9:g.89598370_89598395delGCCCCCCCGGCTGTGGGAAGACGCTG	NP_003110.1:p.Gly349Alafs*38	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SPG7	Right-shifting deletion
 PTV051	16	89613064	AGGAGAGGCG	AT	+	NM_003119.2:c.1454_1462delinsT	NC_000016.9:g.89613070_89613078delinsT	NP_003110.1:p.Arg485Ilefs*3	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SPG7	Given the context of the local sequence it is difficult to determine whether this variant event overlies the canonical splice acceptor site or is an in-frame deletion.
 PTV052	16	89613145	C	T	+	NM_003119.2:c.1529C>T	NC_000016.9:g.89613145C>T	NP_003110.1:p.Ala510Val	-	missense_variant	MISSENSE	ClinVar	substitution	SPG7	
 PTV053	17	7578194	GCAC	G	-	NM_000546.5:c.652_654delGTG	NC_000017.10:g.7578195_7578197delCAC	NP_000537.3:p.Val218del		inframe_deletion		COSMIC	deletion		
 PTV054	17	7578523	T	TG	-	NM_000546.5:c.406dupC	NC_000017.10:g.7578524dupG	NP_000537.3:p.Gln136Profs*13		frameshift_variant	-	COSMIC	duplication	TP53	
 PTV055	17	17119692	A	C	-	NM_144997.5:c.1300+2T>G	NC_000017.10:g.17119692A>C	-	-	splice_donor_variant	NULL	Synthetic	substitution	FLCN	Variant on reverse strand at 5' of intron
-PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197589_41197592delGACA	-		3_prime_UTR_variant		ClinVar	deletion	BRCA1	3'UTR and right shifting: ClinVar has the incorrect syntax: c.*102_*105delCTGT
+PTV056	17	41197588	GGACA	G	-	NM_007294.3:c.*103_*106delTGTC	NC_000017.10:g.41197590_41197593delACAG	-		3_prime_UTR_variant		ClinVar	deletion	BRCA1	3'UTR and right shifting: ClinVar has the incorrect syntax: c.*102_*105delCTGT
 PTV057	17	41256884	C	G	-	NM_007294.3:c.301+1G>C	NC_000017.10:g.41256884C>G	-	-	splice_donor_variant	NULL	ClinVar	substitution	BRCA1	Variant on gene with alternative transcripts
 PTV058	17	42991428	C	A	-	NM_002055.4:c.490G>T	NC_000017.10:g.42991428C>A	NP_002046.1:p.Glu164*	-	stop_gained	NONSENSE	Synthetic	substitution	GFAP	
 PTV059	17	48252809	A	T	+	NM_000023.2:c.*11A>T	NC_000017.10:g.48252809A>T	-		3_prime_UTR_variant		Synthetic	substitution	SGCA	
