@@ -17,7 +17,7 @@ PTV071	2	50847195	G	A	-	NM_001135659.1:c.1405C>T	NC_000002.11:g.50847195G>A	NP_0
 PTV072	2	71825797	C	G	+	NM_003494.3:c.3624C>G	NC_000002.11:g.71825797C>G	NP_003485.1:p.Ile1208Met	-	missense_variant	MISSENSE	Leiden	substitution	DYSF	
 PTV073	2	166179712	G	C	+	NM_021007.2:c.1718G>C	NC_000002.11:g.166179712G>C	NP_066287.2:p.Ser573Thr	-	missense_variant	MISSENSE	Synthetic	substitution	SCN2A	
 PTV074	2	166183371	A	G	+	NM_021007.2:c.2026A>G	NC_000002.11:g.166183371A>G	NP_066287.2:p.Thr676Ala	-	missense_variant	MISSENSE	Synthetic	substitution	SCN2A	
-PTV075	2	166929889	GTCCAGGTCCT	GAC	-	NM_001165963.1:c.233_242delinsGT	NC_000002.11:g.166929890_166929899delinsAC 	NP_001159435.1:p.Glu78Glyfs*7 	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SCN1A	Normalizes to 2:166929890:TCCAGGTCCT:AC
+PTV075	2	166929889	GTCCAGGTCCT	GAC	-	NM_001165963.1:c.233_242delinsGT	NC_000002.11:g.166929890_166929899delinsAC	NP_001159435.1:p.Glu78Glyfs*7	-	frameshift_variant+missense_variant	NULL	Synthetic	indel	SCN1A	Normalizes to 2:166929890:TCCAGGTCCT:AC
 PTV076	2	166929891	CCAGGTCCT	C	-	NM_001165963.1:c.233_240delAGGACCTG	NC_000002.11:g.166929892_166929899delCAGGTCCT	NP_001159435.1:p.Glu78Glyfs*7	-	frameshift_variant+missense_variant	NULL	Synthetic	deletion	SCN1A	
 PTV077	2	179393504	G	T	-	NM_133378.4:c.99270C>A	NC_000002.11:g.179393504G>T	NP_596869.4:p.Ser33090Arg	-	missense_variant	MISSENSE	Synthetic	substitution	TTN	
 PTV078	2	185803444	TGCAGCTGCTGCAGCTGCAGCTGCA	T	+	NM_194250.1:c.3324_3347delTGCAGCTGCAGCTGCAGCCGCAGCTGC	NC_000002.11:g.185803445_185803468delGCAGCTGCTGCAGCTGCAGCTGCA	NP_919226.1:p.Ala1112_Ala1119del	-	inframe_deletion	NULL	Synthetic	deletion	ZNF804A	
@@ -41,10 +41,10 @@ PTV099	7	6026775	T	C	-	NM_000535.5:c.1621G=	NC_000007.13:g.6026775T>C	NP_000526.
 PTV100	7	55242465	GGAATTAAGAGAAGCA	G	+	NM_005228.3:c.2236_2250delGAATTAAGAGAAGCA	NC_000007.13:g.55242466_55242480delGAATTAAGAGAAGCA	NP_005219.2:p.Glu746_Ala750del	-	inframe_deletion		COSMIC	deletion	EGFR	0
 PTV101	7	55248980	C	CTCCAGGAAGCCT	+	NM_005228.3:c.2284-5_2290dupTCCAGGAAGCCT	NC_000007.13:g.55248981_55248992dupTCCAGGAAGCCT	NP_005219.2:p.Ala763_Tyr764insPheGlnGluAla	-	inframe_insertion		COSMIC	duplication	EGFR	p.A763_Y764insFQEA; in COSMIC as c.2290_2291insTCCAGGAAGCCT; COSMIC reports a second entry based on p. but the c. is unknown (COSM1684688); vcf left shifts to 55248980, right shift is at position 55248992
 PTV102	7	75932111	C	A	+	NM_001540.3:c.82C>A	NC_000007.13:g.75932111C>A	NP_001531.1:p.Leu28Ile	-	missense_variant	MISSENSE	Synthetic	substitution	HSPB1	
-PTV103	7	91652178	A	AAAC	+	NM_005751.4:c.4004_4006dupAAC	NC_000007.13:g.91652179_91652181dupAAC 	NP_005742.4:p.Lys1335_Leu1336insGln	-	inframe_insertion	NULL	ClinVar	duplication	AKAP9	Indel; normalizes to 7:91652181:A:AAAC; without normalization HGVS is c.4011_4012insCAA
+PTV103	7	91652178	A	AAAC	+	NM_005751.4:c.4004_4006dupAAC	NC_000007.13:g.91652179_91652181dupAAC	NP_005742.4:p.Lys1335_Leu1336insGln	-	inframe_insertion	NULL	ClinVar	duplication	AKAP9	Indel; normalizes to 7:91652181:A:AAAC; without normalization HGVS is c.4011_4012insCAA
 PTV104	7	117199644	ATCT	A	+	NM_000492.3:c.1521_1523delCTT	NC_000007.13:g.117199646_117199648delCTT	NP_000483.3:p.Phe508del	-	inframe_deletion	NULL	Synthetic	deletion	CFTR	CFTR in frame deletion (delta 508) requires left shifting
-PTV105	7	140453136	AC	CT		NM_004333.4:c.1798_1799delinsAG 	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel		
-PTV106	7	140453136	A	C	-	NM_004333.4:c.1798_1799delinsAG 	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel	BRAF	
+PTV105	7	140453136	AC	CT		NM_004333.4:c.1798_1799delinsAG	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel		
+PTV106	7	140453136	A	C	-	NM_004333.4:c.1798_1799delinsAG	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel	BRAF	
 PTV107	7	140453137	C	T	-	NM_004333.4:c.1798_1799delinsAG	NC_000007.13:g.140453136_140453137delinsCT	NP_004324.2:p.Val600Arg		missense_variant		My Cancer Genome	indel	BRAF	
 PTV108	7	143013488	A	T	+	NM_000083.2:c.180+3A>T	NC_000007.13:g.143013488A>T	-	-	intron_variant	NULL	dbSNP	substitution	CLCN1	
 PTV109	7	143018934	G	A	+	NM_000083.2:c.689G>A	NC_000007.13:g.143018934G>A	NP_000074.2:p.Gly230Glu	-	missense_variant	MISSENSE	ClinVar	substitution	CLCN1	
@@ -67,7 +67,7 @@ PTV024	12	111064166	G	A	+	NM_001082538.2:c.342-1G>A	NC_000012.11:g.111064166G>A	
 PTV025	12	123738430	CA	C	+	NM_152269.4:c.210delA	NC_000012.11:g.123738431delA	NP_689482.1:p.Gly72Alafs*13	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	C12orf65	Frameshift variant
 PTV026	13	31789169	CT	C	-	NM_194318.3:c.71-5delT	NC_000013.10:g.31789183delT	-	-	intron_variant	NULL	Emory	deletion	B3GALTL	Poly_T_left_shifting dbSNP reported as 13:31789183
 PTV027	14	62187287	G	A	+	NM_001530.3:c.223G>A	NC_000014.8:g.62187287G>A	NP_001521.1:p.Ala75Thr		missense_variant		Synthetic	substitution	HIF1A	Missense variant
-PTV028	14	62188231	TT	GA	+	NM_001530.3:c.231_232delinsGA	NC_000014.8:g.62188231_62188232delinsGA 	NP_001521.1:p.Asp77_Leu78delinsGluMet		insertion_deletion		Synthetic	indel	HIF1A	
+PTV028	14	62188231	TT	GA	+	NM_001530.3:c.231_232delinsGA	NC_000014.8:g.62188231_62188232delinsGA	NP_001521.1:p.Asp77_Leu78delinsGluMet		insertion_deletion		Synthetic	indel	HIF1A	
 PTV029	14	63174827	C	A	-	NM_139318.4:c.2366G>T	NC_000014.8:g.63174827C>A	NP_647479.2:p.Gly789Val	-	missense_variant	MISSENSE	Synthetic	substitution	KCNH5	
 PTV030	15	42680000	CA	C	+	NM_000070.2:c.550delA	NC_000015.9:g.42680002delA	NP_000061.1:p.Thr184Argfs*36	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	CAPN3	Lefting shifting deletiona
 PTV030	15	42680000	CA	CAA	+	NM_000070.2:c.550dupA	NC_000015.9:g.42680002dupA	NP_000061.1:p.Thr184Asnfs*16	-	frameshift_variant+missense_variant	NULL	Synthetic	duplication	CAPN3	
@@ -113,7 +113,7 @@ PTV068	19	39076592	G	A	+	NM_000540.2:c.14818G>A	NC_000019.9:g.39076592G>A	NP_000
 PTV069	19	41123094	G	GG	+	NM_003573.2:c.3125G=	NC_000019.9:g.41123095dupG	NP_003564.2:p.Gly1042=	-	synonymous_variant	NULL	dbSNP	duplication	LTBP4	Discrepancy between the RefSeq transcript and Genomic Sequence; normalizes to 19:41123093:A:AG
 PTV081	21	43897396	C	T	+	NM_080860.2:c.727+5G>A	NC_000021.8:g.43897396C>T	-	-	intron_variant	NULL	Synthetic	substitution	RSPH1	
 PTV082	22	30064360	G	GCGACGC	+	NM_000268.3:c.924_925insCGACGC	NC_000022.10:g.30064360_30064361insCGACGC	NP_000259.1:p.Arg310_Arg311dup	-	inframe_insertion	NULL	Synthetic	insertion	NF2	
-PTV083	22	51135988	GGTT	G	+	NM_033517.1:c.1307_1309delCGA	NC_000022.10 :g.51135989_51135991delGTT	NP_277052.1:p.(=)		frameshift_variant+missense_variant	NULL	Synthetic	deletion	SHANK3	Variant on SHANK3 transcript; genomic artifact due to a discrepancy between the RefSeq transcript and Genomic Sequence
+PTV083	22	51135988	GGTT	G	+	NM_033517.1:c.1307_1309delCGA	NC_000022.10:g.51135989_51135991delGTT	NP_277052.1:p.(=)		frameshift_variant+missense_variant	NULL	Synthetic	deletion	SHANK3	Variant on SHANK3 transcript; genomic artifact due to a discrepancy between the RefSeq transcript and Genomic Sequence
 PTV116	HG536_PATCH	10391	AC	A	-	NM_005247.2:c.616delG	NW_003571046.1:g.10392delC	NP_005238.1:p.Val206Serfs*117	-	frameshift_variant+missense_variant	NULL	ClinVar	deletion	FGF3	ClinVar variant on Fix patch
 PTV117	HG865_PATCH	33547	G	A	-	NM_012309.3:c.2566C>T	NW_004070871.1:g.335476G>A	NP_036441.2:p.Leu856=		synonymous_variant	NULL	Synthetic	substitution	SHANK2	Coding change in SHANK2 transcript
 PTV118	HG865_PATCH	569441	G	T	-	NM_012309.3:c.960C>A	NW_00407087.1:g.569441G>T	NP_036441.2:p.320Tyr*	-	stop_gained	NONSENSE	Synthetic	substitution	SHANK2	Variant in fix patch: NW_00407087.1
