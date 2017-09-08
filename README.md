@@ -36,7 +36,7 @@ test set, from which deviations in positional justification are assumed to be
 non-HGVS compliant.
 
 If there are HGVS expressions that are not currently supported by this tool,
-please make a comment or ping jennifer.yen@personalis.com.
+please make a comment or ping jennifer.lee.yen@gmail.com.
 
 
 Future plans
