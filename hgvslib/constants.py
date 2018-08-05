@@ -31,7 +31,7 @@ CANNOT_ASSESS           = '?'
 EXTENSION               = 'ext'
 INTRONIC                = 'intronic'
 MULTI_SUB               = 'multi_sub'
-
+FRAMESHIFT_NAME		= 'frameshift'
 
 DEL_SET = [DEL]
 INS_SET = [DUP,INS]

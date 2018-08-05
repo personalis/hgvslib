@@ -286,3 +286,14 @@ class cHGVS(object):
 		else:
 			return False
 
+
+	def get_alias(chgvs_str):
+        	"""
+		Converts cHGVS to the minimal form. 
+		:param hgvs_str: protein HGVS format
+		:return:  pHGVS in most minimal form
+        	"""
+        	try:
+                	return(cHGVS(chgvs_str).alias)
+        	except:
+                	return('none')
