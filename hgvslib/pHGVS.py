@@ -25,12 +25,13 @@ class pHGVS(object):
 		refseq_id, hgvs_str = pHGVS.parse_phgvs_string(hgvs_str)
 		self.refseq     = refseq_id
 		self.name       = hgvs_str
-		self.alias      = hgvs_str   # default
+		
 		self.pos        = ''  # position of change
 		self.aa1        = ''  # first amino acid
 		self.aa2        = ''  # second amino acid
 
 		self._get_pHGVS_type()
+		self.alias      = hgvs_str   # default
 		self._get_normalized_alias()
 
 
@@ -48,6 +49,7 @@ class pHGVS(object):
 
 		elif 'p.' not in self.name and self.name not in c.NULL_SET:
 			raise Exception('Not a protein coding variant.')
+		
 
 		elif self.__is_synonymous():
 			self.type = c.SYNONYMOUS
@@ -62,9 +64,9 @@ class pHGVS(object):
 			self.type = c.DUP
 
 		elif c.FRAMESHIFT in self.name:
-			self.type = c.FRAMESHIFT
+			self.type = c.FRAMESHIFT_NAME
 
-		elif self.__is_nonsense():
+		elif self.__is_nonsense() or self.name.endswith('X'):
 			self.type = c.NONSENSE
 
 		elif c.INS in self.name:
@@ -103,12 +105,17 @@ class pHGVS(object):
 		'''
 		Checks if variant is in the start codon.
 		'''
-
-		if (self.name.startswith('p.Met1') or
-			  self.name == 'p.Met?'):
+		if self.name in ['p.Met1?', 'p.M1?']:
 			return True
 		else:
-			return False
+			hgvs_re1 = re.search(r'p[.](Met)(1)([a-zA-Z]+)', self.name)
+			hgvs_re2 = re.search(r'p[.](M)(1)([A-Z]+)', self.name)
+
+			if hgvs_re1 or hgvs_re2:
+				return True
+			else:
+				return False
+
 
 	def __is_extension(self):
 		'''
@@ -142,7 +149,11 @@ class pHGVS(object):
 		if (self.name == c.HGVS_SYN or
 			self.name in c.SYN_ALIAS_SET or
 			self.name.endswith('=')):
-			self.alias = c.HGVS_SYN
+			hgvs_re = re.search(r'p[.]([a-zA-Z]+)(\d+)([a-zA-Z]+)', self.name)
+			if hgvs_re:
+				aa1, pos, aa2 = hgvs_re.group(1, 2, 3)
+				if aa1 == aa2:
+					self.alias = 'p.{}{}{}'.format(aa1, pos, aa2)
 			return True
 		else:
 			# need to get the amino acids for synonymous cases that are p.Gly235=
@@ -150,7 +161,7 @@ class pHGVS(object):
 			if hgvs_re:
 				aa1, pos, aa2 = hgvs_re.group(1, 2, 3)
 				if aa1 == aa2:
-					self.alias = c.HGVS_SYN
+					self.alias = 'p.{}{}{}'.format(aa1, pos, aa2)
 					self.aa1 = aa1
 					self.aa2 = aa2
 					self.pos = pos
@@ -167,12 +178,13 @@ class pHGVS(object):
 		Sets the amino acids to Variant object.
 		:return: missense, multi_sub or unknown.
 		'''
-
+		
 		hgvs_re = re.search(r'p[.]([a-zA-Z]+)(\d+)([a-zA-Z]+)', self.name)
 		hgvs_re2 = re.search(r'p[.]([*])(\d+)([*])', self.name.replace('Ter',('*')))
 
 		if hgvs_re:
 			aa1, pos, aa2 = hgvs_re.group(1, 2, 3)
+
 			if aa1 == aa2:
 				self.type = c.SYNONYMOUS
 
@@ -183,8 +195,14 @@ class pHGVS(object):
 				self.pos = pos
 				self.type = c.MISSENSE
 
+			elif len(aa1) == 1 & len(aa2) == 1:
+				self.aa1 = pHGVS.singlet_to_triplet(aa1)
+				self.aa2 = pHGVS.singlet_to_triplet(aa2)
+				self.pos = pos
+				self.type = c.MISSENSE				
+
 			# for p.GluValThrTrp33359ValLysGluLys
-			elif len(aa1)/3 == len(aa2)/3:
+			elif (len(aa1)>1 & len(aa2) > 1) & (len(aa1)/3 == len(aa2)/3):
 				self.aa1 = aa1
 				self.aa2 = aa2
 				self.pos = pos
@@ -196,7 +214,8 @@ class pHGVS(object):
 			aa1, pos, aa2 = hgvs_re2.group(1, 2, 3)
 			self.type = c.SYNONYMOUS
 			self.pos = pos
-			self.alias = c.HGVS_SYN
+			# changed alias from p.(=) to p.Pro35Pro format
+			self.alias = 'p.{}{}{}'.format(aa1, pos, aa2)
 
 		else:
 			self.type = c.UNKNOWN
@@ -216,7 +235,7 @@ class pHGVS(object):
 		elif self.type is c.NONSENSE:
 			self._normalize_nonsense()
 
-		elif self.type is c.FRAMESHIFT:
+		elif self.type is c.FRAMESHIFT_NAME:
 			self._normalize_frameshift()
 
 		elif self.type is c.DEL:
@@ -261,9 +280,11 @@ class pHGVS(object):
 		'''
 		aa_list = self.name.split(c.INS)
 
-		if not aa_list[1].isdigit():
-			num_aa = len(aa_list[1])/3
-			self.alias = '{}{}{}'.format(aa_list[0], c.INS, num_aa)
+		# update - do not reduce insertions to numbers here
+		#if not aa_list[1].isdigit():
+		#	num_aa = len(aa_list[1])/3
+		#	self.alias = '{}{}{}'.format(aa_list[0], c.INS, num_aa)
+			
 
 	def _normalize_extension(self):
 		'''
@@ -281,13 +302,18 @@ class pHGVS(object):
 		else:
 			self.alias = parts[0] + 'ext*?'
 
+			self.alias = parts[0] + 'ext*?'
+
 	def _normalize_nonsense(self):
 		'''
 		Normalize termination to * instead of Ter
 		e.g. p.Arg222Ter to p.Arg222*
 		:return:
 		'''
-		self.alias = self.name.replace('Ter','*')
+		if 'X' in self.name:
+			self.alias = self.name.replace('X', '*')
+		elif 'Ter' in self.name:
+			self.alias = self.name.replace('Ter','*')
 
 	def _normalize_frameshift(self):
 		'''
@@ -296,14 +322,23 @@ class pHGVS(object):
 		:return:
 		'''
 		if c.FRAMESHIFT in self.name:
-			self.alias = self.name.split(c.FRAMESHIFT)[0] + c.FRAMESHIFT
 
-		# convert p.Glu67Glyfs* back to p.Glu67fs
-		hgvs_re = re.search(r'p[.]([A-Z][a-z][a-z])(\d+)([A-Z][a-z][a-z])fs', self.name)
+		    if 'fs*' in self.name:
+		        self.alias = self.name.split('*')[0]
+		    elif '*' in self.name:
+		    	self.alias = self.name.split('*')[0] + c.FRAMESHIFT
+		    else:
+		        self.alias = self.name.split(c.FRAMESHIFT)[0] + c.FRAMESHIFT
 
-		if hgvs_re:
-			first_amino, pos, second_amino = hgvs_re.group(1, 2, 3)
-			self.alias = 'p.{}{}fs'.format(first_amino, pos)
+		    # convert p.Glu67Glyfs* back to p.Glu67fs
+		    hgvs_re = re.search(r'p[.]([A-Z][a-z][a-z])(\d+)([A-Z][a-z][a-z])fs', self.alias)
+		    if not hgvs_re:
+			    hgvs_re = re.search(r'p[.]([A-Z])(\d+)([A-Z])fs', self.alias)
+
+		    if hgvs_re:
+		        first_amino, pos, second_amino = hgvs_re.group(1, 2, 3)
+		        self.alias = 'p.{}{}fs'.format(first_amino, pos)
+
 
 	def _normalize_del(self):
 		'''
@@ -462,7 +497,7 @@ class pHGVS(object):
 		else:
 			result = check_hgvs_status(hgvs_obj1, hgvs_obj2)
 			if not result:
-				print 'ERROR in result', hgvs_obj1.name, hgvs_obj2.name
+				print( 'ERROR in result', hgvs_obj1.name, hgvs_obj2.name)
 			return result
 
 
@@ -505,6 +540,24 @@ class pHGVS(object):
 		return amino_singlet
 
 	@classmethod
+	def singlet_to_triplet(cls, amino_singlet):
+		'''
+		Converts singlet to triplet for a single amino acid as input
+		'''
+		if amino_singlet and amino_singlet in c.AMINO_ACID_SINGLETS:
+			return AminoAcid.triplet_from_singlet(amino_singlet)
+
+
+	@classmethod
+	def triplet_to_singlet(cls, amino_triplet):
+		'''
+		Converts triplet to singlet for a single amino acid as input
+		'''
+		if amino_triplet and amino_triplet in c.AMINO_ACID_TRIPLETS:
+			return AminoAcid.singlet_from_triplet(amino_triplet)
+
+
+	@classmethod
 	def replace_amino_acid_triplet(cls, amino_acid_triplet_re):
 		'''
 		Finds all triplet amino acid occurrences and replaces them with singlet amino acid
@@ -527,6 +580,7 @@ class pHGVS(object):
 		hgvs = re.sub(r'([A-Z])', pHGVS.replace_amino_acid_singlet, hgvs_str)
 		return hgvs
 
+
 	@classmethod
 	def hgvs_singlet_from_triplet(cls, hgvs_str):
 		'''
@@ -536,6 +590,108 @@ class pHGVS(object):
 			return ''
 		hgvs = re.sub(r'([A-Z][a-z][a-z])', pHGVS.replace_amino_acid_triplet, hgvs_str)
 		return hgvs
+		
+
+
+
+	@classmethod
+	def normalize_phgvs(cls, hgvs_str):
+        	"""
+        	Normalizes protein HGVS to minimal SnpEff format
+        	:param hgvs_str: protein HGVS format
+        	:return:  SnpEff protein HGVS format
+        	"""
+        	try:
+                	return(pHGVS(hgvs_str).alias)
+        	except:
+                	return('none')
+
+"""
+Apply functions to do these conversions
+"""
+
+def is_proper_phgvs_format(phgvs_str):
+    """
+    Checks if the phgvs string is in the correct format
+    :params phgvs_str: phgvs string
+    :return: True or False
+    """
+    is_phgvs = False
+
+    phgvs_type = pHGVS.get_var_type(phgvs_str)
+    amino_acid_list = c.AMINO_ACID_SINGLETS + c.AMINO_ACID_TRIPLETS
+    
+    # substitution
+    hgvs_re1 = re.search(r'p[.]([a-zA-Z]+)(\d+)([a-zA-Z\*]+)', phgvs_str)
+    
+    # frameshift
+    hgvs_re2 = re.search(r'p[.]([a-zA-Z]+)(\d+)[_]([a-zA-Z*]+)(\d+)[delins]([a-zA-Z*fs]+)', phgvs_str)      
+    
+    # insertion
+    hgvs_re3 = re.search(r'p[.]([a-zA-Z]+)(\d+)[_]([a-zA-Z*]+)(\d+)[ins]([a-zA-Z*]+)', phgvs_str)
+    
+    # duplication
+    hgvs_re4 = re.search(r'p[.]([a-zA-Z]+)(\d+)[_]([a-zA-Z*]+)(\d+)[dup]', phgvs_str)
+    
+    #deletion
+    hgvs_re5 = re.search(r'p[.]([a-zA-Z]+)(\d+)[_]([a-zA-Z*]+)(\d+)[del]', phgvs_str)
+    
+    re_list = [hgvs_re1, hgvs_re2, hgvs_re3, hgvs_re4, hgvs_re5]
+
+    for search in re_list:
+        if search:
+            aa1 = hgvs_re.group(1)  
+            if aa1 in amino_acid_list:
+                is_phgvs = True                     
+    return(is_phgvs)
+
+
+def convert_phgvs_to_singlet(phgvs_str):
+	"""
+	Converts pHGVS from triplet amino acid to singlet amino acid
+	:param hgvs_str: protein HGVS format
+	:return:  pHGVS in singlet form
+	"""
+	try:
+		return(pHGVS.hgvs_singlet_from_triplet(phgvs_str))
+	except:
+		return('none')
+
+def convert_phgvs_to_triplet(phgvs_str):
+	"""
+	Converts pHGVS from singlet amino acid to triplet amino acid
+	:param hgvs_str: protein HGVS format
+	:return:  pHGVS in triplet form
+	"""	
+	try:
+		return(pHGVS.hgvs_triplet_from_singlet(phgvs_str))
+	except:
+		return('none')
+    
+    
+def get_alias(phgvs_str):
+	"""
+	Converts pHGVS to the minimal form. Please convert to triplet first
+	:param hgvs_str: protein HGVS format
+	:return:  pHGVS in most minimal form
+	"""
+	try:
+		return(pHGVS(phgvs_str).alias)
+	except:
+		return('none')
+    
+def get_var_type(phgvs_str):
+	"""
+	Get variant type
+	:param hgvs_str: protein HGVS format
+	:return:  var_type
+	"""
+	try:
+		return(pHGVS(phgvs_str).type)
+	except:
+		return('none') 
+
+"""
 
 	@classmethod
 	def is_protein(cls, hgvs_str):
@@ -546,6 +702,5 @@ class pHGVS(object):
 		'''
 		if (hgvs_str.startswith(c.PROTEIN_START) or
 		   c.PROTEIN_START in hgvs_str):
-			return True
-		else:
-			return False
+			return
+"""
