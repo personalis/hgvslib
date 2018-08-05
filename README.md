@@ -69,6 +69,29 @@ Example usage
 ```python
 from hgvslib.class_functions import compare_hgvs
 
+### Pandas usage
+
+# Convert column of pHGVS syntax from singlet to triplet
+
+df = pd.DataFrame({'mut_aa': ['p.T417_D419del2insY', 
+                              'p.T46Hfs*35', 
+                              'p.K355_K50del35insTPP', 
+                              'p.N365_366insRDP', 
+                              'p.R544X', 
+                              'p.544fs36']})
+
+# Convert column of singlet amino acid pHGVS to triplet form
+df['mut_aa_triplet']        = df.mut_aa.apply(pHGVS.convert_phgvs_to_triplet)
+
+# Normalize pHGVS syntax to snpEFf minimal pHGVS syntax 
+df['mut_aa_norm']           = df.mut_aa.apply(pHGVS.get_alias)
+
+# Get pHGVS variant consequence format
+df['var_type']              = df.mut_aa.apply(pHGVS.get_var_type)
+
+
+### HGVS syntax comparisons
+
 # The following check returns “yes”, indicating that this is an exact match.
 
 hgvs1 = 'NM_000352.3:c.123delA'
@@ -136,6 +159,9 @@ t = Transcript(hgvs1)
 t.name = 'NM_004958.3'
 t.version = '3'
 t.accession = 'NM_004958'
+
+
+
 
 ```
 
