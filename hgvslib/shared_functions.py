@@ -3,6 +3,29 @@ __author__ = 'jyen'
 
 from hgvslib import constants as c
 
+def phgvs_triplet_from_singlet(hgvs_str):
+	"""
+      	Converts triplet amino acid to singlet
+      	:param hgvs_str: triplet amino acid format
+      	:return:  singlet amino acid format
+	"""
+	try:
+		return(pHGVS.hgvs_triplet_from_singlet(x))
+	except:
+		return('none')
+
+def normalize_phgvs(hgvs_str):
+	"""
+	Normalizes protein HGVS to minimal SnpEff format
+	:param hgvs_str: protein HGVS format
+	:return:  SnpEff protein HGVS format
+	"""
+	try:
+		return(pHGVS(hgvs_str).alias)
+	except:
+		return('none')
+
+
 def is_null(hgvs_str):
 	"""
 	Defines null or blank fields.
