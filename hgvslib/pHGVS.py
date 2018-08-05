@@ -9,7 +9,7 @@ from hgvslib.shared_functions import is_null, check_hgvs_status
 from hgvslib.pythonalis.aminoacid import AminoAcid
 
 # test
-
+# test2
 #---------------------------------------------------------------
 # PROTEIN HGVS
 #---------------------------------------------------------------
