@@ -66,7 +66,7 @@ class pHGVS(object):
 		elif c.FRAMESHIFT in self.name:
 			self.type = c.FRAMESHIFT_NAME
 
-		elif self.__is_nonsense():
+		elif self.__is_nonsense() or self.name.endswith('X'):
 			self.type = c.NONSENSE
 
 		elif c.INS in self.name:
@@ -178,7 +178,7 @@ class pHGVS(object):
 		Sets the amino acids to Variant object.
 		:return: missense, multi_sub or unknown.
 		'''
-
+		
 		hgvs_re = re.search(r'p[.]([a-zA-Z]+)(\d+)([a-zA-Z]+)', self.name)
 		hgvs_re2 = re.search(r'p[.]([*])(\d+)([*])', self.name.replace('Ter',('*')))
 
@@ -310,7 +310,10 @@ class pHGVS(object):
 		e.g. p.Arg222Ter to p.Arg222*
 		:return:
 		'''
-		self.alias = self.name.replace('Ter','*')
+		if 'X' in self.name:
+			self.alias = self.name.replace('X', '*')
+		elif 'Ter' in self.name:
+			self.alias = self.name.replace('Ter','*')
 
 	def _normalize_frameshift(self):
 		'''
