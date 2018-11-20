@@ -50,6 +50,15 @@ Requirements
 
 To install:
 
+- clone directory to your home directory
+git clone https://github.com/personalis/hgvslib.git
+
+- add cloned directory to your python path:
+1) in ~./bashrc: PYTHONPATH=/path_to_hgvslib/hgvslib:$PYTHONPATH
+or
+2) in python: sys.path.append('/path_to_hgvslib/hgvslib')
+
+- May need to install requirements:
 pip install -r requirements.txt
 
 
