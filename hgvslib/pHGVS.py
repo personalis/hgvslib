@@ -618,7 +618,7 @@ def is_proper_phgvs_format(phgvs_str):
     """
     is_phgvs = False
 
-    phgvs_type = pHGVS.get_var_type(phgvs_str)
+    phgvs_type = pHGVS.get_var_type_symbol(phgvs_str)
     amino_acid_list = c.AMINO_ACID_SINGLETS + c.AMINO_ACID_TRIPLETS
     
     # substitution
@@ -680,7 +680,7 @@ def get_alias(phgvs_str):
 	except:
 		return('none')
     
-def get_var_type(phgvs_str):
+def get_var_type_symbol(phgvs_str):
 	"""
 	Get variant type
 	:param hgvs_str: protein HGVS format
@@ -691,6 +691,23 @@ def get_var_type(phgvs_str):
 	except:
 		return('none') 
 
+
+def get_var_type(phgvs_str, simple=False):
+	"""
+	Get variant type and report the longer vartype name
+	Vartype_dict is in concstants
+	:param hgvs_str: protein HGVS format
+	:return:  var_type
+	"""
+	try:
+		vartype_str = pHGVS.pHGVS(phgvs_str).type
+		if vartype_str in c.VARTYPE_DICT.keys():
+			vartype = vartype_str.replace(vartype_str, c.VARTYPE_DICT[vartype_str])
+		else:
+			vartype = vartype_str
+		return(vartype)
+	except:
+		return('') 
 """
 
 	@classmethod

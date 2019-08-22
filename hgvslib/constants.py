@@ -84,3 +84,10 @@ INFRAME_INSERTION_SET   = frozenset(['disruptive_inframe_insertion', 'inframe_in
 START_SET               = frozenset(['initiator_codon_variant', 'start_lost'])
 EFFECT_EQ_LIST          = [INFRAME_DELETION_SET, INFRAME_SET, UPSTREAM_SET, SYN_SET, MISSENSE_SET, START_SET]
 
+
+VARTYPE_DICT 			= {'del':'inframe_deletion',
+							'ins':'inframe_insertion',
+							'ext':'extension',
+							'delins': 'inframe_indel',
+								'dup':'duplication',
+									'?':''}
