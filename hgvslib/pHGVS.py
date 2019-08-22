@@ -692,7 +692,7 @@ def get_var_type_symbol(phgvs_str):
 		return('none') 
 
 
-def get_var_type(phgvs_str, simple=False):
+def get_var_type(phgvs_str):
 	"""
 	Get variant type and report the longer vartype name
 	Vartype_dict is in concstants
@@ -700,7 +700,7 @@ def get_var_type(phgvs_str, simple=False):
 	:return:  var_type
 	"""
 	try:
-		vartype_str = pHGVS.pHGVS(phgvs_str).type
+		vartype_str = pHGVS(phgvs_str).type
 		if vartype_str in c.VARTYPE_DICT.keys():
 			vartype = vartype_str.replace(vartype_str, c.VARTYPE_DICT[vartype_str])
 		else:
