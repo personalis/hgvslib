@@ -77,6 +77,7 @@ Example usage
 
 ```python
 from hgvslib.class_functions import compare_hgvs
+import hgvslib.pHGVS as pHGVS
 
 ### Pandas usage
 
