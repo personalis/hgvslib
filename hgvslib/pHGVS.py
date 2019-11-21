@@ -63,11 +63,11 @@ class pHGVS(object):
 		elif c.DUP in self.name:
 			self.type = c.DUP
 
-		elif c.FRAMESHIFT in self.name:
-			self.type = c.FRAMESHIFT_NAME
-
 		elif self.__is_nonsense() or self.name.endswith('X'):
 			self.type = c.NONSENSE
+
+		elif c.FRAMESHIFT in self.name:
+			self.type = c.FRAMESHIFT_NAME
 
 		elif c.INS in self.name:
 			self.type = c.INS
@@ -135,10 +135,15 @@ class pHGVS(object):
 		:return: True/False
 		'''
 		hgvs = self.name.replace('Ter','*')
-		if ( not hgvs.startswith('p.*') and hgvs.endswith('*') ):
+		# not extension variant and has *fs or *4324fs
+		if ( not hgvs.startswith('p.*')) and len(re.findall(r"\*[0-9]*fs", hgvs))> 0:
+			return True
+		# ends with * but isn't actually frameshift: p.Glu234fs* or p.Glu234fs4324*
+		elif hgvs.endswith('*') and len(re.findall(r"fs[0-9]*\*", hgvs))== 0:
 			return True
 		else:
 			return False
+
 
 	def __is_synonymous(self):
 		'''
@@ -314,6 +319,10 @@ class pHGVS(object):
 			self.alias = self.name.replace('X', '*')
 		elif 'Ter' in self.name:
 			self.alias = self.name.replace('Ter','*')
+		else:
+			match_regex = re.findall(r"\*[0-9]*fs", self.name)
+			if len(match_regex) > 0:
+				self.alias = self.name.replace(match_regex[0], '*')
 
 	def _normalize_frameshift(self):
 		'''
@@ -323,21 +332,19 @@ class pHGVS(object):
 		'''
 		if c.FRAMESHIFT in self.name:
 
-		    if 'fs*' in self.name:
-		        self.alias = self.name.split('*')[0]
-		    elif '*' in self.name:
-		    	self.alias = self.name.split('*')[0] + c.FRAMESHIFT
-		    else:
-		        self.alias = self.name.split(c.FRAMESHIFT)[0] + c.FRAMESHIFT
+			if 'fs*' in self.name:
+				self.alias = self.name.split('*')[0]
+			elif len(re.findall(r"\*[0-9]*fs", self.name))==0:
+				self.alias = self.name.split(c.FRAMESHIFT)[0] + c.FRAMESHIFT
 
-		    # convert p.Glu67Glyfs* back to p.Glu67fs
-		    hgvs_re = re.search(r'p[.]([A-Z][a-z][a-z])(\d+)([A-Z][a-z][a-z])fs', self.alias)
-		    if not hgvs_re:
-			    hgvs_re = re.search(r'p[.]([A-Z])(\d+)([A-Z])fs', self.alias)
+			# convert p.Glu67Glyfs* back to p.Glu67fs
+			hgvs_re = re.search(r'p[.]([A-Z][a-z][a-z])(\d+)([A-Z][a-z][a-z])fs', self.alias)
+			if not hgvs_re:
+				hgvs_re = re.search(r'p[.]([A-Z])(\d+)([A-Z])fs', self.alias)
 
-		    if hgvs_re:
-		        first_amino, pos, second_amino = hgvs_re.group(1, 2, 3)
-		        self.alias = 'p.{}{}fs'.format(first_amino, pos)
+			if hgvs_re:
+				first_amino, pos, second_amino = hgvs_re.group(1, 2, 3)
+				self.alias = 'p.{}{}fs'.format(first_amino, pos)
 
 
 	def _normalize_del(self):
