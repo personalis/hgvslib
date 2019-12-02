@@ -102,6 +102,43 @@ df['var_type']              = df.mut_aa.apply(pHGVS.get_var_type)
 
 ### HGVS syntax comparisons
 
+# The library can also perform basic parsing steps from an HGVS name.
+
+from hgvslib.pHGVS import pHGVS
+
+hgvs = pHGVS('p.Glu412fs*')
+hgvs.alias
+'p.Glu412fs'
+
+hgvs.type
+'frameshift'
+
+
+from hgvslib.cHGVS import cHGVS
+
+hgvs = cHGVS('NM_000352.3:c.215-10A>G')
+
+hgvs.transcript
+'NM_000352.3'
+
+hgvs.name
+'c.215-10A>G'
+
+hgvs.type
+'substitution'
+
+
+# Basic transcript manipulation
+
+hgvs1 = 'NM_004958.3'
+t = Transcript(hgvs1)
+t.name = 'NM_004958.3'
+t.version = '3'
+t.accession = 'NM_004958'
+
+
+
+
 # The following check returns “yes”, indicating that this is an exact match.
 
 hgvs1 = 'NM_000352.3:c.123delA'
@@ -146,29 +183,6 @@ hgvs2 = 'NP_005647.3:p.Q29Ter'
 compare_hgvs(hgvs1, hgvs2)
 'no'
 
-# The library can also perform basic parsing steps from an HGVS name.
-
-from hgvslib.cHGVS import cHGVS
-
-hgvs = cHGVS('NM_000352.3:c.215-10A>G')
-
-hgvs.transcript
-'NM_000352.3'
-
-hgvs.name
-'c.215-10A>G'
-
-hgvs.type
-'substitution'
-
-
-# Basic transcript manipulation
-
-hgvs1 = 'NM_004958.3'
-t = Transcript(hgvs1)
-t.name = 'NM_004958.3'
-t.version = '3'
-t.accession = 'NM_004958'
 
 
 
