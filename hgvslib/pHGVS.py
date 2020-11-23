@@ -1,4 +1,4 @@
-__author__ = 'jyen'
+__author_ROR:root:Not a protein coding variant: none.
 
 import re
 import logging
@@ -47,8 +47,8 @@ class pHGVS(object):
 		if self.name in c.NULL_SET:
 			self.type = '?'
 
-		elif 'p.' not in self.name and self.name not in c.NULL_SET:
-			raise Exception('Not a protein coding variant.')
+		#elif 'p.' not in self.name and self.name not in c.NULL_SET:
+		#	raise Exception('Not a protein coding variant.')
 		
 
 		elif self.__is_synonymous():
@@ -433,7 +433,7 @@ class pHGVS(object):
 			return '', ''
 
 		elif c.PROTEIN_START not in hgvs_str and hgvs_str not in c.NULL_SET:
-			logging.error('Not a protein coding variant: %s.' % hgvs_str)
+			#logging.error('Not a protein coding variant: %s.' % hgvs_str)
 			return '', ''
 
 		# some formatting
