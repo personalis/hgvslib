@@ -1,5 +1,3 @@
-__author_ROR:root:Not a protein coding variant: none.
-
 import re
 import logging
 
