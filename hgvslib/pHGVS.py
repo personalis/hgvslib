@@ -645,7 +645,7 @@ def is_proper_phgvs_format(phgvs_str):
 
     for search in re_list:
         if search:
-            aa1 = hgvs_re.group(1)  
+            aa1 = search.group(1)  
             if aa1 in amino_acid_list:
                 is_phgvs = True                     
     return(is_phgvs)
