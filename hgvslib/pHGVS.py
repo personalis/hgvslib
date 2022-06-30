@@ -623,7 +623,7 @@ def is_proper_phgvs_format(phgvs_str):
     """
     is_phgvs = False
 
-    phgvs_type = pHGVS.get_var_type_symbol(phgvs_str)
+    phgvs_type = get_var_type_symbol(phgvs_str)
     amino_acid_list = c.AMINO_ACID_SINGLETS + c.AMINO_ACID_TRIPLETS
     
     # substitution
