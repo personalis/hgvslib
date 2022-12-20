@@ -466,36 +466,36 @@ class test_cHGVS(unittest.TestCase):
 		var=cHGVS(hgvs_str)
 		transcript='NM_017547.3'
 		chgvs='c.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual((chgvs, transcript), (var.name, var.transcript))
 
 
 	def test_is_coding_1(self):
 		hgvs_str='NM_017547.3(FOXRED1):c.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertTrue(cHGVS.is_coding(hgvs_str))
 
 	def test_is_coding_2(self):
 		hgvs_str='NM_017547.3:m.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertTrue(cHGVS.is_coding(hgvs_str))
 
 	def test_is_coding_3(self):
 		hgvs_str='NM_017547.3:r.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertTrue(cHGVS.is_coding(hgvs_str))
 
 	def test_is_coding_4(self):
 		hgvs_str='NM_017547.3:n.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertTrue(cHGVS.is_coding(hgvs_str))
 
 	def test_is_coding_5(self):
 		hgvs_str='NM_017547.3:g.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertFalse(cHGVS.is_coding(hgvs_str))
 
 	def test_is_coding_6(self):
 		hgvs_str='NM_017547.3:p.694C>T'
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertFalse(cHGVS.is_coding(hgvs_str))
