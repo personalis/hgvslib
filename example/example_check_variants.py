@@ -48,7 +48,7 @@ def main(input_fileobject, outfile):
 
 	out.write(newheader)
 
-	print 'Reading %s, printing to %s' % (input_fileobject.name, outfile)
+	print('Reading %s, printing to %s' % (input_fileobject.name, outfile))
 
 	for line in input_fileobject.readlines():
 		line = line.rstrip().replace('NULL','')
@@ -69,7 +69,7 @@ def main(input_fileobject, outfile):
 		phgvs_check_list = check_ref_list(data['ref_p_hgvs'], phgvs_list, transcript_list)
 		
 		items = '{}\t{}'.format(chgvs_check_list, phgvs_check_list)
-		s = '{line}\t{hgvs_items}\n'.format(line, items)
+		s = f'{line}\t{items}\n'
 		out.write(s)
 
 	out.close()
