@@ -91,14 +91,20 @@ df = pd.DataFrame({'mut_aa': ['p.T417_D419del2insY',
                               'p.544fs36']})
 
 # Convert column of singlet amino acid pHGVS to triplet form
-df['mut_aa_triplet']        = df.mut_aa.apply(pHGVS.convert_phgvs_to_triplet)
+df['mut_aa_triplet']        = df.mut_aa.apply(pHGVS.convert_phgvs_to_triplet, 1)
 
 # Normalize pHGVS syntax to snpEFf minimal pHGVS syntax 
-df['mut_aa_norm']           = df.mut_aa.apply(pHGVS.get_alias)
+df['mut_aa_norm']           = df.mut_aa.apply(pHGVS.get_alias, 1)
 
 # Get pHGVS variant consequence format
-df['var_type']              = df.mut_aa.apply(pHGVS.get_var_type)
+df['var_type']              = df.mut_aa.apply(pHGVS.get_var_type, 1)
 
+
+# Get pHGVS variant consequence format
+df['var_type']              = df.mut_aa.apply(pHGVS.get_var_type, 1)
+
+# Check pHGVS nomenclature is correct (boolean)
+df['is_correct']            = df.mut_aa.apply(pHGVS.is_proper_phgvs_format, 1)
 
 ### HGVS syntax comparisons
 

@@ -19,5 +19,5 @@ class test_transcript_object(unittest.TestCase):
 	def test_transcript_version(self):
 		trans = Transcript(self.transcript)
 
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual((self.refseq, self.version), (trans.accession, trans.version))

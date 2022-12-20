@@ -21,7 +21,7 @@ class test_get_protein_variant_type(unittest.TestCase):
 
 	def test_get_type_1(self):
 		self.query ="p.Glu78fs"
-		self.check="fs"
+		self.check="frameshift"
 		var = pHGVS(self.query)
 		message = "%s, %s, %s" % (self._testMethodName, self.query, self.check)
 		self.assertEqual(var.type, self.check)
@@ -422,7 +422,7 @@ class test_pHGVS(unittest.TestCase):
 		var = pHGVS(hgvs_str)
 		phgvs = 'p.Arg34Arg'
 		refseq = 'NP_017547.3'
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual((phgvs, refseq), (var.name, var.refseq))
 
 #----------------------------------------------------
@@ -439,7 +439,7 @@ class test_convertAminoAcidSinglet(unittest.TestCase):
 		self.hgvs_str = 'p.R652*'
 		self.hgvs_triplet="p.Arg652*"
 		triplet = pHGVS.hgvs_triplet_from_singlet(self.hgvs_str)
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual(self.hgvs_triplet, triplet )
 
 	def test_convertAminoAcidSinglet_2(self):
@@ -447,7 +447,7 @@ class test_convertAminoAcidSinglet(unittest.TestCase):
 		self.hgvs_triplet="p.Arg642_Gln643ins4"
 
 		triplet = pHGVS.hgvs_triplet_from_singlet(self.hgvs1)
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual(self.hgvs_triplet, triplet )
 
 

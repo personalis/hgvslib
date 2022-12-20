@@ -24,7 +24,7 @@ class test_variant_object(unittest.TestCase):
 	def test_variant(self):
 		var = Variant(self.chgvs, self.phgvs, self.id, self.transcript)
 
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual((self.transcript, self.c_hgvs, self.p_hgvs), (var.transcript, var.chgvs, var.phgvs))
 
 
@@ -43,7 +43,7 @@ class test_from_VCF_info_fields(unittest.TestCase):
 		snpeff_info_field = "T|stop_gained|HIGH|CXorf57|ENSG00000147231|transcript|ENST00000372548|protein_coding|4/14|c.997C>T|p.Arg333*|1106/3861|997/2568|333/855||"
 		id = 'X1'
 		var = Variant.from_vcf_info_field(id, snpeff_info_field)
-		print "Check %s.." % (self._testMethodName)
+		print("Check %s.." % (self._testMethodName))
 		self.assertEqual((self.transcript, self.c_hgvs, self.p_hgvs, self.alt), (var.transcript, var.chgvs, var.phgvs, var.alt))
 
 

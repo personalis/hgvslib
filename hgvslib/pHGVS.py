@@ -31,6 +31,7 @@ class pHGVS(object):
 		self._get_pHGVS_type()
 		self.alias      = hgvs_str   # default
 		self._get_normalized_alias()
+		self.is_protein = pHGVS.is_protein(hgvs_str)
 
 
 	def _get_pHGVS_type(self):
@@ -611,6 +612,17 @@ class pHGVS(object):
         	except:
                 	return('none')
 
+	@classmethod
+	def is_protein(cls, hgvs_str):
+		'''
+		Defines protein variants.
+		:param hgvs_str: hgvs expression
+		:return: True or False
+		'''
+		if (hgvs_str.startswith(c.PROTEIN_START) or
+		   c.PROTEIN_START in hgvs_str):
+			return
+
 """
 Apply functions to do these conversions
 """
@@ -623,7 +635,7 @@ def is_proper_phgvs_format(phgvs_str):
     """
     is_phgvs = False
 
-    phgvs_type = pHGVS.get_var_type_symbol(phgvs_str)
+    phgvs_type = get_var_type_symbol(phgvs_str)
     amino_acid_list = c.AMINO_ACID_SINGLETS + c.AMINO_ACID_TRIPLETS
     
     # substitution
@@ -645,7 +657,7 @@ def is_proper_phgvs_format(phgvs_str):
 
     for search in re_list:
         if search:
-            aa1 = hgvs_re.group(1)  
+            aa1 = search.group(1)  
             if aa1 in amino_acid_list:
                 is_phgvs = True                     
     return(is_phgvs)
@@ -691,6 +703,8 @@ def get_var_type_symbol(phgvs_str):
 	:param hgvs_str: protein HGVS format
 	:return:  var_type
 	"""
+	if not phgvs_str.startswith('p.'):
+		phgvs_str = 'p.' + phgvs_str
 	try:
 		return(pHGVS(phgvs_str).type)
 	except:
@@ -704,6 +718,8 @@ def get_var_type(phgvs_str):
 	:param hgvs_str: protein HGVS format
 	:return:  var_type
 	"""
+	if not phgvs_str.startswith('p.'):
+		phgvs_str = 'p.' + phgvs_str	
 	try:
 		vartype_str = pHGVS(phgvs_str).type
 		if vartype_str in c.VARTYPE_DICT.keys():
@@ -713,16 +729,7 @@ def get_var_type(phgvs_str):
 		return(vartype)
 	except:
 		return('') 
-"""
 
-	@classmethod
-	def is_protein(cls, hgvs_str):
-		'''
-		Defines protein variants.
-		:param hgvs_str: hgvs expression
-		:return: True or False
-		'''
-		if (hgvs_str.startswith(c.PROTEIN_START) or
-		   c.PROTEIN_START in hgvs_str):
-			return
-"""
+
+
+

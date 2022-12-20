@@ -20,7 +20,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.hgvs2='c.652del'
 		self.check = c.EQUIVALENT
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 
@@ -30,7 +30,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_3(self):
@@ -39,7 +39,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_4(self):
@@ -48,7 +48,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_5(self):
@@ -57,7 +57,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_6(self):
@@ -66,7 +66,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_7(self):
@@ -75,7 +75,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 	def test_compare_hgvs_8(self):
@@ -84,7 +84,7 @@ class test_compare_hgvs(unittest.TestCase):
 		self.check = c.EQUIVALENT
 
 		check = compare_hgvs(self.hgvs1, self.hgvs2)
-		print 'Check %s..' % (self._testMethodName)
+		print('Check %s..' % (self._testMethodName))
 		self.assertEqual(self.check, check )
 
 
